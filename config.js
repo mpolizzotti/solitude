@@ -7,7 +7,8 @@ config = {
     development: {
         paths: {
             css: path.join(__dirname, '/assets/css/'),
-            less: path.join(__dirname, 'assets/less/')
+            less: path.join(__dirname, 'assets/less/'),
+            js: path.join(__dirname, 'assets/js/')
         }
     }
 };

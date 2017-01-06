@@ -1,3 +1,4 @@
 node_modules/
 assets/css/solitude.css
+assets/js/min/solitude.js
 .DS_Store

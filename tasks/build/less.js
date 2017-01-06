@@ -10,7 +10,7 @@ let gulp = require('gulp'),
     path = require('path');
 
 // Build less.
-gulp.task('build:less', function() {
+gulp.task('build:less', () => {
     let lessPath = path.join(config.development.paths.less, 'solitude.less');
     let cssPath = config.development.paths.css;
 

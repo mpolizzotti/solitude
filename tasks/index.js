@@ -11,6 +11,7 @@ requireDir('./build', { recurse: true });
 // gulp build command.
 gulp.task('build', function () {
     runSequence(
-        'build:less'
+        'build:less',
+        'build:js'
     );
 });

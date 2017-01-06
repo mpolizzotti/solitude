@@ -1,1 +1,2 @@
-console.log('Solitude');
+let themeName = 'Solitude';
+console.log(themeName);
