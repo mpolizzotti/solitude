@@ -1,6 +1,4 @@
-'use strict';
-
-// Module.
+// Modules.
 let gulp = require('gulp'),
     less = require('gulp-less'),
     gutil = require('gulp-util'),
@@ -11,6 +9,8 @@ let gulp = require('gulp'),
 
 // Build less.
 gulp.task('build:less', () => {
+    'use strict';
+
     let lessPath = path.join(config.development.paths.less, 'solitude.less');
     let cssPath = config.development.paths.css;
 

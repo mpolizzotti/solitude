@@ -5,6 +5,7 @@ let gulp = require('gulp'),
     config = require('../../config'),
     path = require('path');
 
+// Checkstyle.
 gulp.task('test:checkstyle', () => {
     'use strict';
 

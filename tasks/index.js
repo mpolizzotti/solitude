@@ -1,5 +1,3 @@
-'use strict';
-
 // Modules.
 let gulp = require('gulp'),
     requireDir = require('require-dir'),
@@ -11,6 +9,8 @@ requireDir('./test', { recurse: true });
 
 // gulp command.
 gulp.task('default', () => {
+    'use strict';
+
     runSequence(
         'build'
     );
@@ -18,6 +18,8 @@ gulp.task('default', () => {
 
 // gulp build command.
 gulp.task('build', () => {
+    'use strict';
+
     runSequence(
         'build:less',
         'build:js'
@@ -26,6 +28,8 @@ gulp.task('build', () => {
 
 // gulp test command.
 gulp.task('test', () => {
+    'use strict';
+
     runSequence(
         'test:checkstyle',
         'test:lint'
