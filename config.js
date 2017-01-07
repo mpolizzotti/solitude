@@ -1,14 +1,17 @@
 'use strict';
 
-let path = require('path'),
-    config;
+// Modules.
+let path = require('path');
 
-config = {
+// Configuration.
+let config = {
     development: {
         paths: {
+            root: path.join(__dirname, '/'),
             css: path.join(__dirname, '/assets/css/'),
-            less: path.join(__dirname, 'assets/less/'),
-            js: path.join(__dirname, 'assets/js/')
+            less: path.join(__dirname, '/assets/less/'),
+            js: path.join(__dirname, '/assets/js/'),
+            tasks: path.join(__dirname, '/tasks/')
         }
     }
 };

@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
-    gutil = require('gulp-util')
+    gutil = require('gulp-util'),
     config = require('../../config'),
     path = require('path');
 

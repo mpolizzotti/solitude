@@ -7,11 +7,26 @@ let gulp = require('gulp'),
 
 // Require all tasks within tasks directory, including subfolders.
 requireDir('./build', { recurse: true });
+requireDir('./quality', { recurse: true });
+
+// gulp command.
+gulp.task('default', () => {
+    runSequence(
+        'build'
+    );
+});
 
 // gulp build command.
-gulp.task('build', function () {
+gulp.task('build', () => {
     runSequence(
         'build:less',
         'build:js'
+    );
+});
+
+// gulp test command.
+gulp.task('test', () => {
+    runSequence(
+        'quality:checkstyle'
     );
 });
