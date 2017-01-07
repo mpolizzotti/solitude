@@ -5,7 +5,7 @@ let gulp = require('gulp'),
     config = require('../../config'),
     path = require('path');
 
-gulp.task('quality:checkstyle', () => {
+gulp.task('test:checkstyle', () => {
     'use strict';
 
     let rootPath = path.join(config.development.paths.root, '*.js');
