@@ -1,5 +1,6 @@
 node_modules/
 assets/css/solitude.css
+assets/js/lib/**
 assets/js/min/**
 jshint-output.log
 .DS_Store

@@ -12,7 +12,7 @@ let gulp = require('gulp'),
 gulp.task('build:js', () => {
     'use strict';
 
-    let sourcePath = path.join(config.development.paths.js, 'src/**/*.js');
+    let sourcePath = path.join(config.development.paths.js, 'src/**/!(*.spec).js');
     let destinationPath = path.join(config.development.paths.js, 'min/');
 
     return gulp
