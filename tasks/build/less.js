@@ -4,6 +4,7 @@ let gulp = require('gulp'),
     gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
+    minify = require('gulp-minify-css'),
     config = require('../../config'),
     path = require('path');
 
@@ -21,6 +22,7 @@ gulp.task('build:less', () => {
             browsers: ['last 2 versions', '> 5%', 'ie < 10'],
             cascade: false
         }))
+        .pipe(minify())
         .pipe(sourcemaps.write())
         .on('error', gutil.log)
         .pipe(gulp.dest(cssPath));
