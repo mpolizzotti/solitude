@@ -24,7 +24,7 @@ gulp.task('build', () => {
     runSequence(
         'copy:lib',
         'build:less',
-        'build:js'
+        'browserify:js'
     );
 });
 

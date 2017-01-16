@@ -10,6 +10,7 @@ export class Solitude {
     constructor() {
         this._name = 'Solitude';
         this._version = '1.0.0';
+        console.log(this._name);
     }
 
     get name() {
