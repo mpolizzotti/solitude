@@ -24,6 +24,7 @@ gulp.task('build', () => {
 
     runSequence(
         'copy:lib',
+        'copy:fonts',
         'build:less',
         'build:js'
     );
