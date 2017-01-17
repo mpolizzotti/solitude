@@ -1,7 +1,8 @@
 // Modules.
 let gulp = require('gulp'),
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
+    buffer = require('vinyl-buffer'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
     uglify = require('gulp-uglify'),
     sourcemaps = require('gulp-sourcemaps'),
     gutil = require('gulp-util'),
@@ -12,14 +13,15 @@ let gulp = require('gulp'),
 gulp.task('build:js', () => {
     'use strict';
 
-    let sourcePath = path.join(config.development.paths.js, 'src/**/!(*.spec).js');
+    let sourcePath = path.join(config.development.paths.js, 'src/solitude.js');
     let destinationPath = path.join(config.development.paths.js, 'min/');
+    let b = browserify({entries: sourcePath, extensions: ['.js'], debug: true});
 
-    return gulp
-        .src([sourcePath])
-        .pipe(sourcemaps.init())
-        .pipe(concat('solitude.min.js'))
-        .pipe(babel({presets: ['es2015']}))
+    return b.transform('babelify', {presets: ['es2015']})
+        .bundle()
+        .pipe(source('solitude.min.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(uglify())
         .on('error', gutil.log)
         .pipe(sourcemaps.write('.'))

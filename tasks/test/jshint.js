@@ -7,7 +7,7 @@ let gulp = require('gulp'),
     path = require('path');
 
 // Lint.
-gulp.task('test:lint', () => {
+gulp.task('test:jshint', () => {
     'use strict';
 
     let rootPath = path.join(config.development.paths.root, '*.js');

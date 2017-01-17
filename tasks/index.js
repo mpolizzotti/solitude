@@ -7,6 +7,7 @@ let gulp = require('gulp'),
 requireDir('./build', { recurse: true });
 requireDir('./copy', { recurse: true });
 requireDir('./test', { recurse: true });
+requireDir('./develop', { recurse: true });
 
 // gulp command.
 gulp.task('default', () => {
@@ -24,7 +25,7 @@ gulp.task('build', () => {
     runSequence(
         'copy:lib',
         'build:less',
-        'browserify:js'
+        'build:js'
     );
 });
 
@@ -33,8 +34,17 @@ gulp.task('test', () => {
     'use strict';
 
     runSequence(
-        'test:checkstyle',
-        'test:lint',
+        'test:jscs',
+        'test:jshint',
         'test:karma'
+    );
+});
+
+// gulp watch command.
+gulp.task('watch', () => {
+    'use strict';
+
+    runSequence(
+        'develop:watch'
     );
 });
