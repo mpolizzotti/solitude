@@ -1,4 +1,13 @@
+// Libs.
 @import '../../node_modules/bootstrap/less/bootstrap';
-@import '../../node_modules/font-awesome/less/font-awesome.less';
+@import '../../node_modules/font-awesome/less/font-awesome';
 
-body {background-color: #DDDDDD;}
+// Base.
+@import 'base/base';
+
+/* Theme Namespace.
+ * Everything in this stylesheet is scoped (nested) within ".solitude".
+ * As a best practice, anything added to this stylesheet (that is not a
+ * variable or mixin) should also be scoped within the namespace.
+--------------------------------------*/
+.solitude {}
