@@ -2,7 +2,6 @@ node_modules/
 assets/css/solitude.css
 assets/js/lib/**
 assets/js/min/**
-assets/fonts/**
 jshint-output.log
 .DS_Store
 npm-debug.log

@@ -1,13 +1,67 @@
 /* Font
  * Fonts used across solitude theme.
 ------------------------------------*/
-@import url('//fonts.googleapis.com/css?family=Nunito:300,400');
-@import url('//fonts.googleapis.com/css?family=Ek+Mukta:300,400,500');
 
-@nunito-light: 'Nunito:300';
-@nunito-regular: 'Nunito:400';
-@ekmukta-light: 'Ek Mukta:300';
-@ekmukta-regular: 'Ek Mukta:400';
-@ekmukta-medium: 'Ek Mukta:500';
+/* Nunito Sans */
+@nunito-path: '../fonts/NunitoSans/';
+@nunito-name: 'Nunito Sans';
+@nunito-file: 'NunitoSans';
+@nunito-light: '@{nunito-name} Light';
+@nunito-regular: '@{nunito-name} Regular';
+@nunito-bold: '@{nunito-name} Bold';
+
+@font-face {
+    font-family: @nunito-light;
+    font-style: normal;
+    font-weight: 400;
+    src: url('@{nunito-path}@{nunito-file}-Light.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: @nunito-regular;
+  font-style: normal;
+  font-weight: 400;
+  src: url('@{nunito-path}@{nunito-file}-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: @nunito-bold;
+    font-style: normal;
+    font-weight: 700;
+    src: url('@{nunito-path}@{nunito-file}-Bold.ttf') format('woff2');
+}
+
+/* EkMukta */
+@ekmukta-path: '../fonts/EkMukta/';
+@ekmukta-name: 'Ek Mukta';
+@ekmukta-light: '@{ekmukta-name} Light';
+@ekmukta-regular: '@{ekmukta-name} Regular';
+@ekmukta-bold: '@{ekmukta-name} Bold';
+@ekmukta-file: 'EkMukta';
+
+@font-face {
+    font-family: @ekmukta-light;
+    font-style: normal;
+    font-weight: 300;
+    src: url('@{ekmukta-path}@{ekmukta-file}-Light.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: @ekmukta-regular;
+    font-style: normal;
+    font-weight: 400;
+    src: url('@{ekmukta-path}@{ekmukta-file}-Regular.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: @ekmukta-bold;
+    font-style: normal;
+    font-weight: 700;
+    src: url('@{ekmukta-path}@{ekmukta-file}-Bold.ttf') format('woff2');
+}
+
+/* Helvetica */
 @helvetica: Helvetica;
+
+/* Arial */
 @arial: Arial;
