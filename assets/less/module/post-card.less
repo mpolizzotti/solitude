@@ -1,0 +1,59 @@
+/* Post Card
+-----------------------------------*/
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.250em 0 1.250em 0;
+    font-family: @nunito-light, @font-fallback;
+    color: @gray-light;
+}
+
+.post-card {
+    flex-grow: 0;
+    background-color: @white;
+    margin: 0 0 2em 0;
+    .drop-shadow (@x: 0, @y: 0, @blur: 0.2em, @spread: 0.12em, @alpha: .2);
+
+    .post-header {
+        padding: 1.250em 1.5em 0 1.5em;
+        text-transform: capitalize;
+
+        .post-title {
+            margin: 0;
+
+            .title {
+                .hover-link (@font-family: @ekmukta-regular, @hover-color: darken(@red, 10%));
+            }
+        }
+    }
+
+    .post-excerpt {
+        font-size: 0.875em;
+        padding: 1.250em 1.5em 1.250em 1.5em;
+    }
+
+    .post-read-more {
+        .read-more {
+            .hover-box();
+        }
+    }
+
+    .post-footer {
+        border-top: 0.063em solid @gray-lighter;
+        font-size: 0.875em;
+        padding: 1.250em 1.5em 1.250em 1.5em;
+
+        .post-author {
+            a {
+                .hover-link (@default-color: @gray-light, @font-family: @nunito-bold, @hover-color: darken(@red, 10%));
+            }
+        }
+
+        .post-time {
+            font-size: 0.8em;
+        }
+    }
+
+    .transition();
+    .hover-grow(@scale: 1.05);
+}
