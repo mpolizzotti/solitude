@@ -7,6 +7,12 @@
     box-shadow: @x @y @blur @spread rgba(0, 0, 0, @alpha);
 }
 
+.inset-shadow (@x: 0, @y: 0, @blur: 8px, @spread: -2px, @alpha: 0.25) {
+   -moz-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+   -webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+   box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
 .circle (@size: 100px, @color: @white, @background: @black) {
     border-radius: 50%;
     width: @size;
@@ -50,6 +56,7 @@
             background: @hover-background;
             text-decoration: @text-decoration;
             color: @hover-color;
+            .inset-shadow(@alpha: 0.70);
         }
 }
 
