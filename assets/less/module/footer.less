@@ -1,0 +1,12 @@
+.footer {
+    border-top: 0.063em solid @white;
+    text-transform: uppercase;
+    padding: 1.7em 0 1.7em 1.2em;
+    background-color: lighten(@gray-light, 40%);
+    font-family: @nunito-bold, @font-fallback;
+    font-size: 0.875em;
+
+    a {
+        .hover-link (@color: @red, @font-family: @nunito-bold, @hover-color: darken(@red, 10%));
+    }
+}
