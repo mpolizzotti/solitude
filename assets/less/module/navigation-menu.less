@@ -1,0 +1,26 @@
+/* Navigation Menu
+-----------------------------------*/
+.navigation-menu {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.875em;
+    font-family: @ekmukta-light, @font-fallback;
+
+    .menu-button {
+        text-transform: uppercase;
+
+        .hover-box(
+            @background: transparent,
+            @border: @white,
+            @color: @white,
+            @hover-border: @black,
+            @hover-background: @white,
+            @hover-color: @black,
+            @padding: .5em .9em,
+            @margin: 1.7em 0 1.7em 1.2em
+        );
+    }
+}
