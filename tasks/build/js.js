@@ -17,7 +17,7 @@ gulp.task('build:js', () => {
     let destinationPath = path.join(config.development.paths.js, 'min/');
     let b = browserify({entries: sourcePath, extensions: ['.js'], debug: true});
 
-    return b.transform('babelify', {presets: ['es2015']})
+    return b.transform('babelify', {presets: ['es2015', 'es2016']})
         .bundle()
         .pipe(source('solitude.min.js'))
         .pipe(buffer())

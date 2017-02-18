@@ -1,6 +1,8 @@
+import NavigationService from './components/navigation/navigation.service';
+
 /**
 * Top-level class for the Solitude theme. This class bootstraps
-* the required JavaScript to execute for the Solitude theme.
+* the required JavaScript needed to run the Solitude theme.
 *
 * @class
 * @type Class
@@ -10,7 +12,9 @@ export class Solitude {
     constructor() {
         this._name = 'Solitude';
         this._version = '1.0.0';
-        console.log(this._name);
+
+        // Enable navigation (sidebar) menu.
+        this.navigationService = new NavigationService();
     }
 
     get name() {
@@ -29,3 +33,6 @@ export class Solitude {
         this._version = newVersion;
     }
 }
+
+// Bootstrap.
+let solitude = new Solitude();
