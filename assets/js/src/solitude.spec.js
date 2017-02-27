@@ -1,4 +1,5 @@
 import { Solitude } from './solitude';
+import { Solitude as navigation} from './solitude';
 
 describe('Solitude Class', () => {
     'use strict';
@@ -7,6 +8,8 @@ describe('Solitude Class', () => {
 
     beforeEach(() => {
         solitude = new Solitude();
+        console.log('SOLITUDE: ', solitude);
+        console.log('navigation: ', navigation);
     });
 
     afterEach(() => {

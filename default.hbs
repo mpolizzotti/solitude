@@ -30,12 +30,9 @@
         {{ghost_head}}
     </head>
     <body class="solitude {{body_class}}">
-
-        {{!-- Navigation
-        {{navigation}} --}}
-
         {{!-- Site wrapper --}}
-        <div class="site-wrapper">
+        <div id="siteWrapper" class="site-wrapper">
+            {{!-- Content --}}
             {{{body}}}
 
             {{!-- Subfooter --}}
@@ -43,6 +40,9 @@
 
             {{!-- Footer --}}
             {{> "footer"}}
+
+            {{!-- Navigation --}}
+            {{navigation}}
         </div>
 
         {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection. --}}

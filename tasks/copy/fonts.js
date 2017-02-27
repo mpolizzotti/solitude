@@ -5,6 +5,8 @@ let gulp = require('gulp'),
 
 // Helper.
 function copyFontsHelper(source, destination) {
+    'use strict';
+
     return gulp
         .src([source])
         .pipe(gulp.dest(destination));

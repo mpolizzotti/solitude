@@ -1,8 +1,16 @@
-<div id="navigationSidebar" class="nav navigation-sidebar">
-    <h3 class="nav-title">Menu</h3>
-    <a href="#" class="nav-close">
-        <span class="hidden">Close</span>
-    </a>
+<div id="navigationSidebar" class="navigation-sidebar">
+    <div class="navigation-header">
+        <a id="navigationClose" href="javascript://" class="navigation-close" role="button">
+            <i class="fa fa-times fa-lg">
+                <span class="sr-only">Close sidebar menu.</span>
+            </i>
+        </a>
+    </div>
+    <div class="navigation-content">
+        &nbsp;
+    </div>
+
+    <!--
     <ul>
         {{#foreach navigation}}
             <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
@@ -13,5 +21,6 @@
     {{else}}
         <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
     {{/if}}
+    -->
 </div>
-<span class="nav-cover"></span>
+<div id="navigationSidebarMask" class="navigation-sidebar-mask"></div>

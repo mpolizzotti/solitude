@@ -1,0 +1,96 @@
+/* Navigation Sidebar
+-----------------------------------*/
+.navigation-sidebar {
+    position: fixed;
+    left: -44.063em;
+    top: 0;
+    bottom: 0;
+    width: 43.750em;
+    background-color: @white;
+    border-right: 0.063em solid lighten(@gray-light, 30%);
+    z-index: (@zindex + 10);
+    .drop-shadow (@x: 1px, @y: 0, @blur: 8px, @spread: 0, @alpha: 0.50);
+    transition:all 0.3s ease;
+
+    .navigation-header {
+        border-bottom: 0.063em solid lighten(@gray-light, 30%);
+        padding: 1.2em 1.7em;
+        display: flex;
+        justify-content: flex-end;
+
+        .navigation-close {
+            display: inline-block;
+            .hover-link(@color: lighten(@gray-light, 30%), @hover-color: @black);
+        }
+    }
+}
+
+.navigation-sidebar-mask {
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: (@zindex + 9);
+    background-color: @black;
+    .opacity(@opacity: 0);
+    transition:all 0.3s ease;
+}
+
+.navigation-open {
+    .navigation-sidebar-mask {
+        .opacity(@opacity: 0.6);
+        visibility: visible;
+    }
+
+    .navigation-sidebar {
+        left: 0;
+    }
+}
+
+.navigation-close {
+    .navigation-sidebar-mask {
+        .opacity(@opacity: 0);
+        visibility: hidden;
+    }
+
+    .navigation-sidebar {
+        left: -44.063em;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .navigation-sidebar {
+        width: 100vw;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .navigation-sidebar {
+        width: 100vw;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .navigation-sidebar {
+        width: 37.500em;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .navigation-sidebar {
+        width: 37.500em;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .navigation-sidebar {
+        width: 43.750em;
+    }
+}

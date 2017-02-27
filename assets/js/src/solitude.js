@@ -1,4 +1,4 @@
-import NavigationService from './components/navigation/navigation.service';
+import {NavigationService} from './components/navigation/navigation.service';
 
 /**
 * Top-level class for the Solitude theme. This class bootstraps
@@ -35,4 +35,7 @@ export class Solitude {
 }
 
 // Bootstrap.
-let solitude = new Solitude();
+$(() => {
+    'use strict';
+    let solitude = new Solitude();
+});

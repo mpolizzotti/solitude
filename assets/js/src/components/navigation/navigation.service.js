@@ -1,13 +1,14 @@
 const MODULE_NAME = 'solitude.navigation.service';
 
 /**
-* Class level comment.
+* The NavigationService class manages the opening and closing of
+* the sidebar navigation menu.
 *
 * @class
 * @type Class
 * @return public API
  */
-export default class NavigationService {
+export class NavigationService {
     constructor() {
         this.isNavigationOpen = false;
         this.cacheNodes();
@@ -15,39 +16,54 @@ export default class NavigationService {
         this.bindEventListeners();
     }
 
+    checkNodes() {
+        let nodes = true;
+
+        if (this.siteWrapper.length === 0 || this.menuButton.length === 0 ||
+            this.navigationSidebarMask.length === 0 || this.navigationClose.length === 0) {
+                console.info('NavigationService. Missing DOM nodes. The navigation menu is inoperable.');
+                nodes = false;
+        }
+
+        return nodes;
+    }
+
     cacheNodes() {
-        this.body = $('body');
-        this.navigationMenu = $('#navigationMenu');
+        this.siteWrapper = $('#siteWrapper');
         this.menuButton = $('#menuButton');
+        this.navigationSidebarMask = $('#navigationSidebarMask');
+        this.navigationClose = $('#navigationClose');
     }
 
     prepareDOM() {
-        if (this.body.length === 0) {
-            console.info('NavigationService. Missing DOM node. The body tag cannot be found.');
-            this.navigationMenu.hide();
+        if (!this.checkNodes()) {
             return;
         }
 
-        this.body.addClass('navigation-close');
+        this.siteWrapper.addClass('navigation-close');
     }
 
-    onSelectMenuButton(e) {
-        this.isNavigationOpen = !this.isNavigationOpen;
+    toggleNavigationMenu() {
+        if (!this.checkNodes()) {
+            return;
+        }
 
+        this.isNavigationOpen = !this.isNavigationOpen;
         if (!this.isNavigationOpen) {
-            this.body.removeClass('navigation-open').addClass('navigation-close');
+            this.siteWrapper.removeClass('navigation-open').addClass('navigation-close');
+            this.menuButton.focus();
         } else {
-            this.body.removeClass('navigation-close').addClass('navigation-open');
+            this.siteWrapper.removeClass('navigation-close').addClass('navigation-open');
+            this.navigationClose.focus();
         }
     }
 
     bindEventListeners() {
-        if (this.body.length === 0 || this.menuButton.length === 0) {
-            console.info('NavigationService. Missing DOM nodes. The navigation menu is inoperable and will be hidden.');
-            this.navigationMenu.hide();
+        if (!this.checkNodes()) {
             return;
         }
 
-        this.menuButton.off().on('click', (e) => this.onSelectMenuButton(e));
+        this.menuButton.off().on('click', (e) => this.toggleNavigationMenu(e));
+        this.navigationClose.off().on('click', (e) => this.toggleNavigationMenu(e));
     }
 }

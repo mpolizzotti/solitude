@@ -2,9 +2,10 @@
     <div class="main-header">
         {{#if @blog.navigation}}
             <nav id="navigationMenu" class="navigation-menu">
-                <a id="menuButton" class="menu-button" href="javascript://">
-                    <i class="fa fa-bars" aria-hidden="true"><span class="sr-only">Menu icon</span></i>
-                    <span class="sr-only">Menu</span>
+                <a id="menuButton" class="menu-button" href="javascript://" role="button">
+                    <i class="fa fa-bars" aria-hidden="true">
+                        <span class="sr-only">Open sidebar menu.</span>
+                    </i>
                 </a>
             </nav>
         {{/if}}
