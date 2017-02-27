@@ -7,20 +7,52 @@
         </a>
     </div>
     <div class="navigation-content">
-        &nbsp;
-    </div>
+        <!--Explore-->
+        <section class="navigation-section">
+            <h2 class="section-title">Explore</h2>
+            <nav>
+                <ul class="list-unstyled section-list">
+                    {{#foreach navigation}}
+                        <li class="navigation-{{slug}} {{#if current}}navigation-current{{/if}} section-list-item" role="presentation">
+                            <a href="{{url absolute="true"}}">{{label}}</a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+            </nav>
+        </section>
 
-    <!--
-    <ul>
-        {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-        {{/foreach}}
-    </ul>
-    {{#if @labs.subscribers}}
-        <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
-    {{else}}
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-    {{/if}}
-    -->
+        <!--About-->
+        <section class="navigation-section">
+            <h2 class="section-title">About Matthew</h2>
+            <p>
+                Who am I? Glad you asked. I'm a Husband, a Father, a Front-end Architect, a Full Stack JavaScript Developer,
+                a lifetime learner and an avid Pearl Jam fanatic! I'm based out of Phoenix, Arizona and I work as a software
+                consultant for <a href="http://www.unicon.net" target="_blank">Unicon</a>, an amazing, developer-centric and
+                family-oriented, consulting firm specializing in IT and web solutions for Higher Education and Digital
+                Publishing markets.
+            </p>
+        </section>
+
+
+        <!--Contact-->
+        <section class="navigation-section">
+            <h2 class="section-title">Contact Matthew</h2>
+            <p>
+                I love to talk technology and share ideas. If you’re interested in collaborating, drop me an email.
+            </p>
+            <address>
+                <a href="mailto:matthew.polizzotti@gmail.com">matthew.polizzotti@gmail.com</a>
+            </address>
+        </section>
+
+        <!--Subscribe-->
+        <section class="navigation-section">
+            {{#if @labs.subscribers}}
+                <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
+            {{else}}
+                <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+            {{/if}}
+        </section>
+    </div>
 </div>
 <div id="navigationSidebarMask" class="navigation-sidebar-mask"></div>

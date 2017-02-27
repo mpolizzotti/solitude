@@ -64,26 +64,32 @@
 .hover-box (
     @background: @cream,
     @border: darken(@gray-lighter, 10%),
+    @border-width: 0.063em,
     @color: @gray-light,
     @hover-border: darken(@red, 15%),
     @hover-background: darken(@red, 10%),
-    @text-decoration: none,
     @hover-color: @white,
+    @text-decoration: none,
+    @flex: inline-flex,
+    @flex-direction: row,
+    @align-items: baseline,
+    @justify-content: flex-start,
     @padding: 0.375em 0.750em,
     @margin: 0.500em 0) {
-        display: inline-flex;
-        flex-direction: row;
-        align-items: baseline;
+        display: @flex;
+        flex-direction: @flex-direction;
+        align-items: @align-items;
+        justify-content: @justify-content;
         padding: @padding;
         margin: @margin;
 
         background: @background;
-        border: 0.063em solid @border;
+        border: @border-width solid @border;
         color: @color;
         transition:all 0.3s ease;
 
         &:hover, &:focus {
-            border: 0.063em solid @hover-border;
+            border: @border-width solid @hover-border;
             background: @hover-background;
             text-decoration: @text-decoration;
             color: @hover-color;
