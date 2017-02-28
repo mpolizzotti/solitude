@@ -19,8 +19,8 @@ export class NavigationService {
     checkNodes() {
         let nodes = true;
 
-        if (this.siteWrapper.length === 0 || this.menuButton.length === 0 ||
-            this.navigationSidebarMask.length === 0 || this.navigationClose.length === 0) {
+        if (!this.siteWrapper || !this.menuButton ||
+            !this.navigationSidebarMask || !this.navigationClose) {
                 console.info('NavigationService. Missing DOM nodes. The navigation menu is inoperable.');
                 nodes = false;
         }
@@ -29,10 +29,10 @@ export class NavigationService {
     }
 
     cacheNodes() {
-        this.siteWrapper = $('#siteWrapper');
-        this.menuButton = $('#menuButton');
-        this.navigationSidebarMask = $('#navigationSidebarMask');
-        this.navigationClose = $('#navigationClose');
+        this.siteWrapper = document.querySelector('#siteWrapper');
+        this.menuButton = document.querySelector('#menuButton');
+        this.navigationSidebarMask = document.querySelector('#navigationSidebarMask');
+        this.navigationClose = document.querySelector('#navigationClose');
     }
 
     prepareDOM() {
@@ -40,20 +40,22 @@ export class NavigationService {
             return;
         }
 
-        this.siteWrapper.addClass('navigation-close');
+        this.siteWrapper.classList.add('navigation-close');
     }
 
-    toggleNavigationMenu() {
+    toggleNavigationMenu(e) {
         if (!this.checkNodes()) {
             return;
         }
 
         this.isNavigationOpen = !this.isNavigationOpen;
         if (!this.isNavigationOpen) {
-            this.siteWrapper.removeClass('navigation-open').addClass('navigation-close');
+            this.siteWrapper.classList.remove('navigation-open');
+            this.siteWrapper.classList.add('navigation-close');
             this.menuButton.focus();
         } else {
-            this.siteWrapper.removeClass('navigation-close').addClass('navigation-open');
+            this.siteWrapper.classList.remove('navigation-close');
+            this.siteWrapper.classList.add('navigation-open');
             this.navigationClose.focus();
         }
     }
@@ -63,7 +65,10 @@ export class NavigationService {
             return;
         }
 
-        this.menuButton.off().on('click', (e) => this.toggleNavigationMenu(e));
-        this.navigationClose.off().on('click', (e) => this.toggleNavigationMenu(e));
+        this.menuButton.removeEventListener('click', false);
+        this.menuButton.addEventListener('click', (e) => this.toggleNavigationMenu(e), false);
+
+        this.navigationClose.removeEventListener('click', false);
+        this.navigationClose.addEventListener('click', (e) => this.toggleNavigationMenu(e), false);
     }
 }
