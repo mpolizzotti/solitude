@@ -1,3 +1,5 @@
+import {RestrictTabbingService} from '../keyboard/restrict.tabbing.service';
+
 const MODULE_NAME = 'solitude.navigation.service';
 
 /**
@@ -31,6 +33,7 @@ export class NavigationService {
     cacheNodes() {
         this.siteWrapper = document.querySelector('#siteWrapper');
         this.menuButton = document.querySelector('#menuButton');
+        this.navigationSidebar = document.querySelector('#navigationSidebar');
         this.navigationSidebarMask = document.querySelector('#navigationSidebarMask');
         this.navigationClose = document.querySelector('#navigationClose');
     }
@@ -41,6 +44,7 @@ export class NavigationService {
         }
 
         this.siteWrapper.classList.add('navigation-close');
+        this.restrictTabbingService = new RestrictTabbingService(this.navigationSidebar);
     }
 
     toggleNavigationMenu(e) {
@@ -52,10 +56,12 @@ export class NavigationService {
         if (!this.isNavigationOpen) {
             this.siteWrapper.classList.remove('navigation-open');
             this.siteWrapper.classList.add('navigation-close');
+            this.restrictTabbingService.disable();
             this.menuButton.focus();
         } else {
             this.siteWrapper.classList.remove('navigation-close');
             this.siteWrapper.classList.add('navigation-open');
+            this.restrictTabbingService.enable();
             this.navigationClose.focus();
         }
     }
