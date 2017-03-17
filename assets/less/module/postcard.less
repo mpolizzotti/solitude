@@ -8,17 +8,18 @@
     color: @gray-light;
 }
 
-.post-card {
+.postcard {
     flex-grow: 0;
     background-color: @white;
     margin: 0 0 2em 0;
     .drop-shadow (@x: 0, @y: 0, @blur: 0.2em, @spread: 0.12em, @alpha: .2);
 
-    .post-header {
+    .postcard-header {
         padding: 1.250em 1.5em 0 1.5em;
         text-transform: capitalize;
+        background-color: @white;
 
-        .post-title {
+        .postcard-title {
             margin: 0;
 
             .title {
@@ -27,29 +28,29 @@
         }
     }
 
-    .post-excerpt {
+    .postcard-excerpt {
         font-size: 0.875em;
         padding: 1.250em 1.5em 1.250em 1.5em;
     }
 
-    .post-read-more {
+    .postcard-read-more {
         .read-more {
             .hover-box();
         }
     }
 
-    .post-footer {
+    .postcard-footer {
         border-top: 0.063em solid @gray-lighter;
         font-size: 0.875em;
         padding: 1.250em 1.5em 1.250em 1.5em;
 
-        .post-author {
+        .postcard-author {
             a {
                 .hover-link (@color: @gray-light, @font-family: @nunito-bold, @hover-color: darken(@red, 10%));
             }
         }
 
-        .post-time {
+        .postcard-time {
             font-size: 0.8em;
         }
     }

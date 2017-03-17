@@ -33,14 +33,19 @@
 
     .title-container {
         text-align: left;
+        padding: 0 1.7em 0 1.7em;
 
         .title {
             font-family: @ekmukta-light, @font-fallback;
             font-size: 2.563em;
             color: @white;
             letter-spacing: .2em;
-            white-space: nowrap;
+            white-space: normal;
             text-transform: uppercase;
+        }
+
+        .date {
+            color: @gray-light;
         }
     }
 
@@ -61,6 +66,61 @@
                 @padding: 0.7em 0.750em,
                 @margin: 0 1.2em 1.2em 0
             );
+        }
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .post-header {
+        .title-container {
+            .title {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .post-header {
+        .title-container {
+            .title {
+                font-size: 2em;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .post-header {
+        .title-container {
+            .title {
+                font-size: 2.563em;
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .post-header {
+        .title-container {
+            .title {
+                font-size: 2.563em;
+            }
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .post-header {
+        .title-container {
+            .title {
+                font-size: 2.563em;
+            }
         }
     }
 }

@@ -21,7 +21,7 @@
 
             <footer class="post-footer">
 
-            {{!-- Everything inside the #author tags pulls data from the author --}}
+            {{!-- Everything inside the #author tags pulls data from the author
             {{#author}}
 
                 {{#if image}}
@@ -45,7 +45,9 @@
                 </section>
 
             {{/author}}
+            --}}
 
+                {{!--
                 <section class="share">
                     <h4>Share this post</h4>
                     <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
@@ -61,8 +63,9 @@
                         <span class="hidden">Google+</span>
                     </a>
                 </section>
+                --}}
 
-                {{!-- Email subscribe form at the bottom of the page --}}
+                {{!-- Email subscribe form at the bottom of the page
                 {{#if @labs.subscribers}}
                 <section class="gh-subscribe">
                     <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
@@ -71,13 +74,13 @@
                     <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
                 </section>
                 {{/if}}
-
+                --}}
             </footer>
 
         </article>
     </main>
 
-    {{!-- Links to Previous/Next posts --}}
+    {{!-- Links to Previous/Next posts
     <aside class="read-next">
         {{#next_post}}
         <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
@@ -96,4 +99,5 @@
         </a>
         {{/prev_post}}
     </aside>
+    --}}
 {{/post}}
