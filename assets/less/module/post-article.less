@@ -1,0 +1,19 @@
+.post-article {
+    .post-article-byline {
+        padding: 0 0 1.250em 0;
+        color: @gray-light;
+
+        a {
+            .hover-link(@color: @gray-dark, @hover-color: @red, @font-family: @nunito-bold);
+        }
+    }
+
+    .post-article-content {
+        p {
+            .drop-caps();
+            line-height: 2.0;
+            font-size: 1.063em;
+            margin: 0 0 2.500em 0;
+        }
+    }
+}
