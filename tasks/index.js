@@ -37,7 +37,6 @@ gulp.task('test', () => {
     runSequence(
         'test:jscs',
         'test:jshint',
-        'build:js',
         'test:karma'
     );
 });
