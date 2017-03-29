@@ -1,0 +1,34 @@
+/* Social Media
+-----------------------------------*/
+.social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 2.5em 0;
+
+    .social-media-title {
+        display: inline-flex;
+        text-transform: uppercase;
+        font-family: @nunito-regular, @font-fallback;
+        font-size: 0.875em;
+        padding: 0 1em 0 0;
+        margin: 0;
+    }
+
+    .social-media-list {
+        display: inline-flex;
+        flex-direction: row;
+        margin: 0;
+
+        .social-media-list-item {
+            display: inline-block;
+
+            .social-media-icon {
+                .hover-box(
+                    @padding: 0.750em 0.750em,
+                    @margin: 0 0.3em 0 0
+                );
+            }
+        }
+    }
+}

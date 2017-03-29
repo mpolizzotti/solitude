@@ -1,0 +1,82 @@
+/* Post Author
+-----------------------------------*/
+.post-author {
+    border: 0.063em solid @black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 1.563em 1.563em;
+
+    .post-author-avatar {
+        padding: 0 1em 0 0;
+
+        .brand-avatar {
+            .circle(@size: 5em, @background: @gray-darker);
+            .drop-shadow (@x: 0, @y: 0, @blur: 0, @spread: 0, @alpha: .3);
+
+            .brand-avatar-inner {
+                .circle(@size: 4.5em, @background: @white);
+            }
+        }
+    }
+
+    .post-author-meta {
+        .post-author-title {
+            font-family: @ekmukta-bold, @font-fallback;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+
+        .post-author-bio {
+            a {
+                .hover-link(@color: @gray-dark, @hover-color: darken(@red, 15%), @font-family: @nunito-bold);
+            }
+        }
+    }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    .post-author {
+        .post-author-avatar {
+            display: none;
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    .post-author {
+        .post-author-avatar {
+            display: none;
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    .post-author {
+        .post-author-avatar {
+            display: block;
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .post-author {
+        .post-author-avatar {
+            display: block;
+        }
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    .post-author {
+        .post-author-avatar {
+            display: block;
+        }
+    }
+}

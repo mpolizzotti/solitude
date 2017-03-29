@@ -11,57 +11,61 @@
         {{content}}
     </section>
     <section class="post-article-share">
-        <h4 class="post-article-share-title">Share</h4>
-        <ul class="list-unstyled post-article-share-list">
-            <li class="post-article-share-list-item">
-                <a class="social-media-icon" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" target="_blank">
-                    <i class="fa fa-twitter"><span class="sr-only">Twitter</span></i>
-                </a>
-            </li>
-            <li class="post-article-share-list-item">
-                <a class="social-media-icon" href="https://plus.google.com/share?url={{url absolute="true"}}" target="_blank">
-                    <i class="fa fa-google-plus"><span class="sr-only">Google+</span></i>
-                </a>
-            </li>
-        </ul>
+        <div class="social-media">
+            <h4 class="social-media-title">Share</h4>
+            <ul class="list-unstyled social-media-list">
+                <li class="social-media-list-item">
+                    <a class="social-media-icon" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}" target="_blank">
+                        <i class="fa fa-twitter"><span class="sr-only">Twitter</span></i>
+                    </a>
+                </li>
+                <li class="social-media-list-item">
+                    <a class="social-media-icon" href="https://plus.google.com/share?url={{url absolute="true"}}" target="_blank">
+                        <i class="fa fa-google-plus"><span class="sr-only">Google+</span></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
-
-    <footer class="post-article-footer">
-        {{!-- Everything inside the #author tags pulls data from the author
+    <section class="post-article-author">
         {{#author}}
-
-            {{#if image}}
-            <figure class="author-image">
-                <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-            </figure>
-            {{/if}}
-
-            <section class="author">
-                <h4><a href="{{url}}">{{name}}</a></h4>
-
-                {{#if bio}}
-                    <p>{{bio}}</p>
-                {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
-                {{/if}}
-                <div class="author-meta">
-                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
-                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+            <div class="post-author">
+                <div class="post-author-avatar">
+                    <div class="brand-avatar">
+                        <div class="brand-avatar-inner">&nbsp;</div>
+                    </div>
                 </div>
-            </section>
-
+                <div class="post-author-meta">
+                    <h4 class="post-author-title">About The Author</h4>
+                    {{#if bio}}
+                        <p class="post-author-bio">{{bio}}</p>
+                    {{else}}
+                        <p class="post-author-bio">
+                            <span>Read <a href="{{url}}">more posts</a> by this author.</span>
+                        </p>
+                    {{/if}}
+                    <div class="social-media">
+                        <h4 class="social-media-title">Follow</h4>
+                        <ul class="list-unstyled social-media-list">
+                            <li class="social-media-list-item">
+                                <a class="social-media-icon" href="https://twitter.com/mpolizzotti/" target="_blank">
+                                    <i class="fa fa-twitter"><span class="sr-only">Twitter</span></i>
+                                </a>
+                            </li>
+                            <li class="social-media-list-item">
+                                <a class="social-media-icon" href="https://www.linkedin.com/in/matthew-polizzotti-92a28652" target="_blank">
+                                    <i class="fa fa-linkedin"><span class="sr-only">Linkedin</span></i>
+                                </a>
+                            </li>
+                            <li class="social-media-list-item">
+                                <a class="social-media-icon" href="https://plus.google.com/100951874705247698641" target="_blank">
+                                    <i class="fa fa-google-plus"><span class="sr-only">Google+</span></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         {{/author}}
-        --}}
-
-        {{!-- Email subscribe form at the bottom of the page
-        {{#if @labs.subscribers}}
-        <section class="gh-subscribe">
-            <h3 class="gh-subscribe-title">Subscribe to {{@blog.title}}</h3>
-            <p>Get the latest posts delivered right to your inbox.</p>
-            {{subscribe_form placeholder="Your email address"}}
-            <span class="gh-subscribe-rss">or subscribe <a href="http://cloud.feedly.com/#subscription/feed/{{@blog.url}}/rss/">via RSS</a> with Feedly!</span>
-        </section>
-        {{/if}}
-        --}}
-    </footer>
+    </section>
 </article>

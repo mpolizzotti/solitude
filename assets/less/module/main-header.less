@@ -50,23 +50,6 @@
             align-items: center;
         }
 
-        .brand-avatar {
-            display: inline-flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: center;
-            align-items: center;
-            margin: 0 .6em;
-            .circle(@size: 5.625em, @background: @gray-darker);
-            .drop-shadow (@x: 0, @y: 0, @blur: 0.125em, @spread: 0.125em, @alpha: .3);
-
-            .brand-avatar-inner {
-                background: @white url('../images/blog-avatar.png') no-repeat -6px 0;
-                background-size: 115%;
-                .circle(@size: 4.875em, @background: @white);
-            }
-        }
-
         .brand-name {
             font-family: @ekmukta-light, @font-fallback;
             font-size: .9em;
