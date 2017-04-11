@@ -11,24 +11,6 @@
         </div>
     </main>
 
-    {{!-- Links to Previous/Next posts
-    <aside class="read-next">
-        {{#next_post}}
-        <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-            <section class="post">
-                <h2>{{title}}</h2>
-                <p>{{excerpt words="19"}}&hellip;</p>
-            </section>
-        </a>
-        {{/next_post}}
-        {{#prev_post}}
-        <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-            <section class="post">
-                <h2>{{title}}</h2>
-                <p>{{excerpt words="19"}}&hellip;</p>
-            </section>
-        </a>
-        {{/prev_post}}
-    </aside>
-    --}}
+    {{!-- Links to Previous/Next posts --}}
+    {{> "next-article"}}
 {{/post}}

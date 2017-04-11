@@ -1,0 +1,20 @@
+<aside class="next-article" role="complementary">
+    {{#prev_post}}
+        <a href="{{url}}" class="article-excerpt previous">
+            <section>
+                <span class="article-excerpt-direction">Previous</span>
+                <h2 class="article-excerpt-title">{{title}}</h2>
+                <time class="article-excerpt-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+        </a>
+    {{/prev_post}}
+    {{#next_post}}
+        <a href="{{url}}" class="article-excerpt next">
+            <section>
+                <span class="article-excerpt-direction">Next</span>
+                <h2 class="article-excerpt-title">{{title}}</h2>
+                <time class="article-excerpt-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+            </section>
+        </a>
+    {{/next_post}}
+</aside>
