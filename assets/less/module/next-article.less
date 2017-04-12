@@ -14,6 +14,7 @@
         text-decoration: none;
         padding: 1.7em 1.7em 10em 1.7em;
         flex-grow: 1;
+        text-align: center;
         transition:all 0.3s ease;
 
         .article-excerpt-direction {
@@ -41,7 +42,11 @@
                 color: @red;
             }
         }
+    }
+}
 
+.next-article-i-i {
+    .article-excerpt {
         &.previous {
             text-align: left;
         }
@@ -50,7 +55,5 @@
             text-align: right;
             border-left: 0.063em solid lighten(@gray-light, 30%);
         }
-
-
     }
 }
