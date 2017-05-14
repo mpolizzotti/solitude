@@ -1,0 +1,22 @@
+<div class="tags">
+    <header class="tags-header">
+        <h3 class="tags-title">
+            <span>Tags</span>
+        </h3>
+    </header>
+    <section class="tags-content">
+        {{#if posts}}
+            <ul class="list-unstyled tags-list">
+                {{#foreach posts}}
+                    {{#if tags}}
+                        {{#foreach tags}}
+                            <li class="tags-list-item">
+                                <a href="{{url}}" title="{{name}}" class="tag">{{name}}</a>
+                            </li>
+                        {{/foreach}}
+                    {{/if}}
+                {{/foreach}}
+            </ul>
+        {{/if}}
+    </section>
+</div>

@@ -1,0 +1,21 @@
+{{!< default}}
+
+{{!-- Header --}}
+{{> "main-header"}}
+
+{{!-- Content --}}
+<main id="content" class="content" role="main">
+    <div class="container">
+        {{> "posts"}}
+    </div>
+</main>
+
+{{!-- Aside --}}
+<aside class="content-aside" role="complementary">
+    <section class="content-aside-section">
+        {{> "posts-latest"}}
+    </section>
+    <section class="content-aside-section">
+        {{> "tags"}}
+    </section>
+</aside>
