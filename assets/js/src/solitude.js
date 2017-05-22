@@ -1,4 +1,5 @@
 import {NavigationService} from './components/navigation/navigation.service';
+import {TagsService} from './components/tags/tags.service';
 
 /**
 * Top-level class for the Solitude theme. This class bootstraps
@@ -15,6 +16,9 @@ export class Solitude {
 
         // Enable navigation (sidebar) menu.
         this.navigationService = new NavigationService();
+
+        // Enforce unique tags when exposed.
+        this.tagsService = new TagsService();
     }
 
     get name() {
