@@ -21,3 +21,20 @@
         }
     }
 }
+
+/* Small Devices, Tablets */
+@media (max-width : 768px) {
+    .content-aside {
+        flex-direction: column;
+
+        .content-aside-section {
+            border-right: none;
+            border-bottom: 0.063em solid lighten(@gray-light, 30%);
+            padding: 2em 1.7em 3em 1.7em;
+
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}
