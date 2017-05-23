@@ -56,47 +56,12 @@
     }
 }
 
-/* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
-    .sub-footer-responsive (
-        @subfooter-padding: 1.7em 0 1.7em 0.5em,
-        @icon-padding: 0.5em 0.5em,
-        @icon-margin: 0 0.3em 0 0
-    );
-}
-
+/* Desktop First */
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 480px) {
-    .sub-footer-responsive (
+@media (max-width : 480px) {
+    .sub-footer-responsive(
         @subfooter-padding: 1.7em 0 1.7em 0.5em,
         @icon-padding: 0.5em 0.5em,
-        @icon-margin: 0 0.3em 0 0
-    );
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-    .sub-footer-responsive (
-        @subfooter-padding: 1.7em 0 1.7em 1.2em,
-        @icon-padding: 0.750em 0.750em,
-        @icon-margin: 0 0.3em 0 0
-    );
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-    .sub-footer-responsive (
-        @subfooter-padding: 1.7em 0 1.7em 1.2em,
-        @icon-padding: 0.750em 0.750em,
-        @icon-margin: 0 0.3em 0 0
-    );
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-    .sub-footer-responsive (
-        @subfooter-padding: 1.7em 0 1.7em 1.2em,
-        @icon-padding: 0.750em 0.750em,
         @icon-margin: 0 0.3em 0 0
     );
 }
