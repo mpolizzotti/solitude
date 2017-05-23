@@ -22,7 +22,6 @@ export class TagsService {
         let nodes = true;
 
         if (!this.tagsList || !this.tags || !this.tagsEmpty || !this.tagsLoader) {
-            console.info('TagsService. Missing DOM nodes. Tags rendered to end users will not be unique.');
             nodes = false;
         }
 
@@ -31,7 +30,11 @@ export class TagsService {
 
     cacheNodes() {
         this.tagsList = document.querySelector('#tagsList');
-        this.tags = this.tagsList.querySelectorAll(':scope li');
+
+        if (this.tagsList) {
+            this.tags = this.tagsList.querySelectorAll(':scope li');
+        }
+
         this.tagsEmpty = document.querySelector('#tagsEmpty');
         this.tagsLoader = document.querySelector('#tagsLoader');
     }
