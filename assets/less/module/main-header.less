@@ -26,7 +26,8 @@
         }
 
         .blog-tag-line {
-            font-family: @ekmukta-light, @font-fallback;
+            font-family: @ekmukta-regular, @font-fallback;
+            font-size: 1.063em;
             text-transform: uppercase;
             color: @white;
             padding: 0 0 .1em 0;
@@ -51,7 +52,7 @@
         }
 
         .brand-name {
-            font-family: @ekmukta-light, @font-fallback;
+            font-family: @ekmukta-regular, @font-fallback;
             font-size: .9em;
             text-transform: uppercase;
             color: @white;
@@ -65,6 +66,28 @@
 
         .last-name {
             letter-spacing: .23em;
+        }
+    }
+}
+
+/* Desktop First */
+/* Extra Small Devices, Phones */
+@media (max-width : 320px) {
+    .main-header {
+        .brand-container {
+            .blog-tag-line {
+                letter-spacing: .23em;
+            }
+        }
+
+        .brand-profile {
+            .first-name {
+                letter-spacing: .23em;
+            }
+
+            .last-name {
+                letter-spacing: .2em;
+            }
         }
     }
 }

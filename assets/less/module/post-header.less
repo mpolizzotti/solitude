@@ -36,7 +36,7 @@
         padding: 0 1.7em 0 1.7em;
 
         .title {
-            font-family: @ekmukta-light, @font-fallback;
+            font-family: @ekmukta-regular, @font-fallback;
             font-size: 2.563em;
             color: @white;
             letter-spacing: .2em;
@@ -52,13 +52,15 @@
     .link-container {
         position: absolute;
         bottom: 0; right: 0;
-        a {
+        .back-to-blog {
+            font-family: @ekmukta-regular, @font-fallback;
             text-transform: uppercase;
-            font-size: 0.875em;
+            font-size: 1em;
 
             .hover-box(
                 @background: transparent,
                 @border: @white,
+                @border-width: 0.188em,
                 @color: @white,
                 @hover-border: @black,
                 @hover-background: @white,
