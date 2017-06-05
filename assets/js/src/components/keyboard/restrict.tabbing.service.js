@@ -35,7 +35,8 @@ export class RestrictTabbingService {
             return;
         }
 
-        this.selectors = this.rootNode.querySelectorAll(':scope a, :scope button');
+        // The :scope syntax, used in conjunction with querySelectorAll is not yet supported by IE11.
+        this.selectors = this.rootNode.querySelectorAll('a, button');
         this.selectors = _.map(this.selectors, (node) => {
             node.setAttribute('data-tabbing-id', _.uniqueId());
             return node;
