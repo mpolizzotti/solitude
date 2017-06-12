@@ -15,10 +15,23 @@
                     <img src="{{asset "images/blog-logo.png"}}" class="img-responsive" alt="Blog Logo">
                 </div>
             </div>
-            <div class="title-container">
-                <h1 class="title">{{title}}</h1>
-                <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+
+            <div class="content-container">
+                {{#if tags}}
+                    <div class="tags-container">
+                        {{> "tags-label"}}
+                    </div>
+                {{/if}}
+
+                <div class="title-container">
+                    <h1 class="title">{{title}}</h1>
+                </div>
+
+                <div class="date-container">
+                    <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                </div>
             </div>
+
             <div class="link-container">
                 <a class="back-to-blog" href="{{@blog.url}}"><span>Back to Blog</span></a>
             </div>

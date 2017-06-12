@@ -22,34 +22,6 @@
 
     .postcard-tags {
         padding: 1.250em 1.5em 1.250em 1.5em;
-
-        .postcard-tags-list {
-            margin: 0;
-            display: inline-flex;
-            flex-direction: row;
-
-            .postcard-tags-list-item {
-                display: inline-block;
-
-                .postcard-tag {
-                    display: inline-block;
-                    font-family: @ekmukta-bold, @font-fallback;
-                    text-transform: uppercase;
-                    font-size: .875em;
-                    .hover-box(
-                        @background: darken(@red, 10%),
-                        @border: darken(@red, 10%),
-                        @border-width: 0.188em,
-                        @margin: 0 0.500em 0 0,
-                        @padding: 0.2em .5em,
-                        @color: @white,
-                        @hover-border: @black,
-                        @hover-background: lighten(@black, 30%),
-                        @hover-color: @white
-                    );
-                }
-            }
-        }
     }
 
     .postcard-header {

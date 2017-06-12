@@ -8,13 +8,7 @@
             <article class="{{post_class}} postcard">
                 {{#if tags}}
                     <section class="postcard-tags">
-                        <ul class="list-unstyled postcard-tags-list">
-                            {{#foreach tags}}
-                                <li class="postcard-tags-list-item">
-                                    <a href="{{url}}" title="{{name}}" class="postcard-tag">{{name}}</a>
-                                </li>
-                            {{/foreach}}
-                        </ul>
+                        {{> "tags-label"}}
                     </section>
                 {{/if}}
 
