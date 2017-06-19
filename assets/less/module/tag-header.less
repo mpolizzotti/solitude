@@ -1,0 +1,86 @@
+/* Tag header
+-----------------------------------*/
+.tag-header {
+    background-color: @cream;
+    padding: 0 0 3em 0;
+
+    .tag-header-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        background: @black url('../images/header-background.png') no-repeat 0 0;
+        background-size: cover;
+        border-bottom: 0.063em solid @black;
+        padding: 7.4em 0 8.4em 0;
+        .drop-shadow();
+    }
+
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        white-space: normal;
+        text-align: left;
+        max-width: 100%;
+
+        .title-container {
+            padding: 0 1.7em 0 1.7em;
+
+            .title {
+                font-family: @ekmukta-regular, @font-fallback;
+                font-size: 2.563em;
+                color: @white;
+                letter-spacing: .2em;
+                text-transform: uppercase;
+            }
+        }
+
+        .date-container {
+            padding: 0 1.7em 0 1.7em;
+            color: @gray-light;
+        }
+    }
+
+    .link-container {
+        position: absolute;
+        bottom: 0; right: 0;
+        .back-to-blog {
+            font-family: @ekmukta-regular, @font-fallback;
+            text-transform: uppercase;
+            font-size: 1em;
+
+            .hover-box(
+                @background: transparent,
+                @border: @white,
+                @border-width: 0.188em,
+                @color: @white,
+                @hover-border: @black,
+                @hover-background: @white,
+                @hover-color: @black,
+                @padding: 0.7em 0.750em,
+                @margin: 0 1.2em 1.2em 0
+            );
+        }
+    }
+}
+
+.tag-header-responsive (@font-size: 2em) {
+    .tag-header {
+        .title-container {
+            .title {
+                font-size: @font-size;
+            }
+        }
+    }
+}
+
+/* Desktop First */
+/* Extra Small Devices, Phones */
+@media (max-width : 480px) {
+    .tag-header-responsive(@font-size: 2em);
+}

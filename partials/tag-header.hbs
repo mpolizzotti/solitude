@@ -1,0 +1,31 @@
+<header>
+    <div class="tag-header">
+        <div class="tag-header-inner">
+            {{#if @blog.navigation}}
+                <nav id="navigationMenu" class="navigation-menu">
+                    <a id="menuButton" class="menu-button" href="javascript://" role="button">
+                        <i class="fa fa-bars" aria-hidden="true">
+                            <span class="sr-only">Open sidebar menu.</span>
+                        </i>
+                    </a>
+                </nav>
+            {{/if}}
+
+            {{#tag}}
+                <div class="content-container">
+                    <div class="title-container">
+                        <h1 class="title">{{name}}</h1>
+                    </div>
+
+                    <div class="date-container">
+                        <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                    </div>
+                </div>
+            {{/tag}}
+
+            <div class="link-container">
+                <a class="back-to-blog" href="{{@blog.url}}"><span>Back to Blog</span></a>
+            </div>
+        </div>
+    </div>
+</header>
