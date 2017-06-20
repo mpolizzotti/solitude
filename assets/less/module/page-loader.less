@@ -1,0 +1,30 @@
+/* Page Loader
+-----------------------------------*/
+@page-loader-zindex: (@zindex + 40);
+@page-loader-spinner-zindex: (@page-loader-zindex - 1);
+@page-loader-backdrop-zindex: (@page-loader-spinner-zindex - 1);
+
+.page-loader {
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:@page-loader-zindex;
+
+    .page-loader-spinner {
+        color: @white;
+        padding-top: 50vh;
+        z-index: @page-loader-spinner-zindex;
+    }
+
+    .page-loader-backdrop {
+        position: absolute;
+        top: 0; left: 0;
+        right: 0; bottom: 0;
+        background-color: @black;
+        .opacity(@opacity: 0.8);
+        z-index: @page-loader-backdrop-zindex;
+    }
+}
