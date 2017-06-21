@@ -11,12 +11,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index:@page-loader-zindex;
+    z-index: @page-loader-zindex;
 
     .page-loader-spinner {
         color: @white;
         padding-top: 50vh;
         z-index: @page-loader-spinner-zindex;
+        .opacity(@opacity: 1);
+        transition: all 0.3s ease;
     }
 
     .page-loader-backdrop {
@@ -26,5 +28,16 @@
         background-color: @black;
         .opacity(@opacity: 0.8);
         z-index: @page-loader-backdrop-zindex;
+        transition: all 0.3s ease;
+    }
+
+    &.page-loader-fade {
+        .page-loader-spinner, .page-loader-backdrop {
+            .opacity(@opacity: 0);
+        }
+    }
+
+    &.page-loader-hide {
+        display: none;
     }
 }
