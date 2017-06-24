@@ -1,6 +1,7 @@
 /* Twitter List
 -----------------------------------*/
 .twitter-list {
+    position: relative;
     text-align: left;
 
     .twitter-header {
@@ -16,7 +17,7 @@
         height: 325px;
         overflow-y: auto;
         border-top: 0.188em solid @black;
-        position: relative;
+    }
 
         .twitter-loader {
             opacity: 1;
@@ -24,7 +25,7 @@
             display: block;
             position: absolute;
             text-align: center;
-            top: 0; left: 0;
+            top: 65px; left: 0;
             bottom: 0; right: 0;
             background-color: @white;
             padding-top: 3.125em;
@@ -34,5 +35,4 @@
                 visibility: hidden;
             }
         }
-    }
 }
