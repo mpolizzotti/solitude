@@ -1,4 +1,4 @@
-<div class="twitter-list">
+<div id="twitterList" class="twitter-list">
     <header class="twitter-header">
         <h3 class="twitter-title">
             <span>Twitter</span>
@@ -8,7 +8,9 @@
         <a class="twitter-timeline" href="https://twitter.com/mpolizzotti">&nbsp;</a>
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
-
+    <section id="twitterContentError" class="twitter-content-error hidden">
+        <p class="empty">Twitter feed is currently unavailable.</p>
+    </section>
     <div id="twitterLoader" class="twitter-loader">
         <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true"></i>
         <span class="sr-only" aria-hidden="false">Loading twitter...</span>

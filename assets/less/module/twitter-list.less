@@ -14,25 +14,35 @@
     }
 
     .twitter-content {
-        height: 325px;
+        height: 20.313em;
         overflow-y: auto;
         border-top: 0.188em solid @black;
     }
 
-        .twitter-loader {
-            opacity: 1;
-            transition: all .5s ease;
-            display: block;
-            position: absolute;
-            text-align: center;
-            top: 65px; left: 0;
-            bottom: 0; right: 0;
-            background-color: @white;
-            padding-top: 3.125em;
+    .twitter-content-error {
+        height: 20.313em;
+        overflow-y: auto;
+        border-top: 0.188em solid @black;
 
-            &.twitter-loaded {
-                opacity: 0;
-                visibility: hidden;
-            }
+        p {
+            padding: 0.938em 0 0 0;
         }
+    }
+
+    .twitter-loader {
+        opacity: 1;
+        transition: all .5s ease;
+        display: block;
+        position: absolute;
+        text-align: center;
+        top: 65px; left: 0;
+        bottom: 0; right: 0;
+        background-color: @white;
+        padding-top: 3.125em;
+
+        &.twitter-loaded {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import {NavigationService} from './components/navigation/navigation.service';
 import {TagsService} from './components/tags/tags.service';
+import {TwitterService} from './components/twitter/twitter.service';
 import {PageLoaderService} from './components/page-loader/page.loader.service'
 
 /**
@@ -21,8 +22,11 @@ export class Solitude {
         // Enable navigation (sidebar) menu.
         this.navigationService = new NavigationService();
 
-        // Enforce unique tags when exposed.
+        // Manage rendering of unique tags.
         this.tagsService = new TagsService();
+
+        // Manage rendering of twitter feed.
+        this.twitterService = new TwitterService();
 
         // Reveal interface after site has loaded.
         this.pageLoaderService = new PageLoaderService();
