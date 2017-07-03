@@ -1,16 +1,14 @@
 {{!< default}}
 
-{{#post}}
-    {{!-- Header --}}
-    {{> "post-header"}}
+{{!-- Header --}}
+{{> "post-header"}}
 
-    {{!-- Content --}}
-    <main id="content" class="content" role="main">
-        <div class="container">
-            {{> "post-article"}}
-        </div>
-    </main>
+{{!-- Content --}}
+<main id="content" class="content" role="main">
+    <div class="container">
+        {{> "post-article"}}
+    </div>
+</main>
 
-    {{!-- Links to Previous/Next posts --}}
-    {{> "next-article"}}
-{{/post}}
+{{!-- Links to Previous/Next posts --}}
+{{> "next-article"}}
