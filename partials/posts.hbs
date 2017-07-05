@@ -1,5 +1,6 @@
-{{!-- Previous/next page links --}}
+{{!-- Previous/next page links 
 {{pagination}}
+--}}
 
 {{!-- This is the post loop - each post will be output using this markup --}}
 <div class="posts-container">
@@ -11,25 +12,19 @@
                         {{> "tags-label"}}
                     </section>
                 {{/if}}
-
                 <header class="postcard-header">
                     <h2 class="postcard-title">
                         <a href="{{url}}" class="title">{{title}}</a>
                     </h2>
                 </header>
-                <section class="postcard-excerpt">
-                    <p>{{excerpt words="26"}}<span>&hellip;</span></p>
-
-                    <div class="postcard-read-more">
-                        <a class="read-more" href="{{url}}">Read More &nbsp;<i class="fa fa-angle-double-right hidden" aria-hidden="true"></i></a>
+                <section class="postcard-content">
+                    <div class="postcard-author">
+                        By {{author}} on <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
                     </div>
                 </section>
                 <footer class="postcard-footer">
-                    <div class="postcard-author">
-                        {{author}}
-                    </div>
-                    <div class="postcard-time">
-                        <time class="date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                    <div class="postcard-read-more">
+                        <a class="read-more" href="{{url}}">Read More &nbsp;<i class="fa fa-angle-double-right hidden" aria-hidden="true"></i></a>
                     </div>
                 </footer>
             </article>

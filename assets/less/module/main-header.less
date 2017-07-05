@@ -14,25 +14,33 @@
         background: @black url('../images/header-background.png') no-repeat 0 0;
         background-size: cover;
         border-bottom: 0.063em solid @black;
-        padding: 5.5em 0 6em 0;
+        padding: 6em 0 8em 0;
+        margin: 0 0 0.625em 0;
         .drop-shadow();
 
         .blog-logo {
-            padding: 0 0 1.5em 0;
+            padding: 0 0 2em 0;
             img {
-                width: 6.875em;
+                width: 10em;
                 height: auto;
             }
         }
 
         .blog-tag-line {
             font-family: @ekmukta-regular, @font-fallback;
-            font-size: 1.063em;
             text-transform: uppercase;
             color: @white;
             padding: 0 0 .1em 0;
             letter-spacing: .3em;
             white-space: nowrap;
+
+            &.primary {
+                font-size: 1.3em;
+            }
+
+            &.secondary {
+                font-size: 1.5em;
+            }
         }
     }
 
@@ -52,6 +60,7 @@
         }
 
         .brand-name {
+            display: none;
             font-family: @ekmukta-regular, @font-fallback;
             font-size: .9em;
             text-transform: uppercase;
@@ -72,21 +81,50 @@
 
 /* Desktop First */
 /* Extra Small Devices, Phones */
+@media (max-width : 480px) {
+    .main-header {
+        .brand-container {
+            padding: 6em 0 6.5em 0;
+
+            .blog-logo {
+                img {
+                    width: 8em;
+                }
+            }
+
+            .blog-tag-line {
+                &.primary {
+                    font-size: 1.0em;
+                }
+
+                &.secondary {
+                    font-size: 1.1em;
+                }
+            }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */
 @media (max-width : 320px) {
     .main-header {
         .brand-container {
+            padding: 6em 0 6.5em 0;
+
+            .blog-logo {
+                img {
+                    width: 8em;
+                }
+            }
+
             .blog-tag-line {
-                letter-spacing: .23em;
-            }
-        }
+                &.primary {
+                    font-size: 1em;
+                }
 
-        .brand-profile {
-            .first-name {
-                letter-spacing: .23em;
-            }
-
-            .last-name {
-                letter-spacing: .2em;
+                &.secondary {
+                    font-size: 1.1em;
+                }
             }
         }
     }

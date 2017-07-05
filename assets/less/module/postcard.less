@@ -25,7 +25,7 @@
     }
 
     .postcard-header {
-        padding: 1.250em 1.5em 0 1.5em;
+        padding: 0 1.5em 0 1.5em;
         text-transform: capitalize;
         background-color: @white;
 
@@ -33,46 +33,46 @@
             margin: 0;
 
             .title {
+                text-transform: uppercase;
                 .hover-link(@font-family: @ekmukta-bold, @hover-color: darken(@red, 10%));
             }
         }
     }
 
-    .postcard-excerpt {
-        font-size: 1.063em;
-        padding: 1.250em 1.5em 1.250em 1.5em;
+    .postcard-content {
+        font-size: .9em;
+        padding: .5em 1.7em 1.250em 1.7em;
         letter-spacing: 0.031em;
+        text-transform: uppercase;
+        margin: 0 0 8em 0;
+
+        .postcard-author {
+            a {
+                .hover-link(@color: @black, @font-family: @nunito-bold, @hover-color: darken(@red, 10%));
+            }
+        }
     }
 
     .postcard-read-more {
         .read-more {
-            font-family: @ekmukta-regular, @font-fallback;
+            font-family: @ekmukta-bold, @font-fallback;
             text-transform: uppercase;
             .hover-box(
-                @color: darken(@gray-lighter, 30%),
+                @color: @black,
+                @background: @white,
+                @border: @black,
                 @border-width: 0.188em,
                 @hover-border: @black,
-                @hover-background: lighten(@black, 0%),
+                @hover-background: @black,
                 @hover-color: @white
             );
         }
     }
 
     .postcard-footer {
-        border-top: 0.188em solid @gray-lighter;
         font-size: 1.063em;
         letter-spacing: 0.031em;
         padding: 1.250em 1.5em 1.250em 1.5em;
-
-        .postcard-author {
-            a {
-                .hover-link(@color: @gray-light, @font-family: @nunito-bold, @hover-color: darken(@red, 10%));
-            }
-        }
-
-        .postcard-time {
-            font-size: 0.8em;
-        }
     }
 
     &:last-child {
