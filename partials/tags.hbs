@@ -5,20 +5,24 @@
         </h3>
     </header>
     <section class="tags-content">
-        {{#if posts}}
-            <ul id="tagsList" class="list-unstyled tags-list">
-                {{#foreach posts}}
-                    {{#if tags}}
+        {{#if @labs.publicAPI}}
+            {{#get "tags" limit="all"}}
+                {{#if tags}}
+                    <ul id="tagsList" class="list-unstyled tags-list">
                         {{#foreach tags}}
                             <li class="tags-list-item">
                                 <a href="{{url}}" title="{{name}}" class="tag">{{name}}</a>
                             </li>
                         {{/foreach}}
-                    {{/if}}
-                {{/foreach}}
-            </ul>
+                    </ul>
+                {{else}}
+                    <span class="empty">No articles have been tagged.</span>
+                {{/if}}
+            {{/get}}
+        {{else}}
+            <span class="empty">No articles have been tagged.</span>
         {{/if}}
-        <span id="tagsEmpty" class="empty hidden">No articles have been tagged.</span>
+
         <div id="tagsLoader" class="tags-loader">
             <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true"></i>
             <span class="sr-only" aria-hidden="false">Loading tags...</span>

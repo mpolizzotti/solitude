@@ -5,17 +5,25 @@
         </h3>
     </header>
     <section class="posts-latest-content">
-        {{#if posts}}
-        <ul class="list-unstyled posts-latest-list">
-            {{#foreach posts}}
-                <li class="posts-latest-list-item">
-                    <a href="{{url}}" class="posts-latest-article">{{title}}</a>
-                    <time class="posts-latest-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-                </li>
-            {{/foreach}}
-        </ul>
+        {{#if @labs.publicAPI}}
+            {{#get "posts" limit="3" order="published_at desc"}}
+                {{#if posts}}
+                    <ul class="list-unstyled posts-latest-list">
+                        {{#foreach posts}}
+                            <li class="posts-latest-list-item">
+                                <a href="{{url}}" class="posts-latest-article">{{title}}</a>
+                                <time class="posts-latest-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                            </li>
+                        {{/foreach}}
+                    </ul>
+                {{else}}
+                    <span class="empty">New posts are coming soon!</span>
+                {{/if}}
+            {{/get}}
         {{else}}
             <span class="empty">New posts are coming soon!</span>
         {{/if}}
     </section>
 </div>
+
+

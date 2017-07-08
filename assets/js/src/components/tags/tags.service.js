@@ -21,7 +21,7 @@ export class TagsService {
     checkNodes() {
         let nodes = true;
 
-        if (!this.tagsList || !this.tags || !this.tagsEmpty || !this.tagsLoader) {
+        if (!this.tagsList || !this.tags || !this.tagsLoader) {
             nodes = false;
         }
 
@@ -35,7 +35,6 @@ export class TagsService {
             this.tags = this.tagsList.querySelectorAll(':scope li');
         }
 
-        this.tagsEmpty = document.querySelector('#tagsEmpty');
         this.tagsLoader = document.querySelector('#tagsLoader');
     }
 
@@ -63,8 +62,10 @@ export class TagsService {
             return;
         }
 
-        if (_.isEmpty(tagsMap)) {
-            this.tagsEmpty.classList.remove('hidden');
+        let tags = Array.from(this.tags);
+
+        if (tags.length === tagsMap.length) {
+            this.tagsLoader.classList.add('tags-loaded');
             return;
         }
 

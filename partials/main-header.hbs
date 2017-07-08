@@ -20,13 +20,24 @@
                 <span>JavaScript Developer</span>
             </div>
         </div>
+
         <div class="brand-profile">
             <div class="brand-profile-inner">
                 <div class="brand-name first-name">
                     <span>Matthew</span>
                 </div>
-                <div class="brand-avatar">
-                    <div class="brand-avatar-inner">&nbsp;</div>
+                <div class="brand-avatar swing">
+                    {{#if @labs.publicAPI}}
+                        {{#get "users" limit="1"}}
+                            {{#foreach users}}
+                                <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
+                                    <div class="brand-avatar-inner">&nbsp;</div>
+                                </a>
+                            {{/foreach}}
+                        {{/get}}
+                    {{else}}
+                        <div class="brand-avatar-inner">&nbsp;</div>
+                    {{/if}}
                 </div>
                 <div class="brand-name last-name">
                     <span>Polizzotti</span>

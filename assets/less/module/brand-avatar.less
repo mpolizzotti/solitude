@@ -10,6 +10,13 @@
     .circle(@size: 8em, @background: @gray-darker);
     .drop-shadow(@x: 0, @y: 0, @blur: 0.125em, @spread: 0.125em, @alpha: .3);
 
+    .brand-avatar-link {
+        color: transparent;
+        &:hover, &:focus {
+            color: transparent;
+        }
+    }
+
     .brand-avatar-inner {
         background: @white url('../images/blog-avatar.png') no-repeat -10px 0;
         background-size: 115%;
