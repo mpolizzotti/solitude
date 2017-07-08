@@ -13,7 +13,7 @@ export class TwitterService {
     constructor() {
         this.cacheNodes();
         this.counter = 0;
-        this.threshold = 5;
+        this.threshold = 10;
         this.twitterFeed = [];
         this.pollTwitterFeed();
     }
