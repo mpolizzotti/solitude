@@ -6,7 +6,7 @@
     flex-wrap: nowrap;
     background-color: @white;
     border-top: 0.063em solid lighten(@gray-light, 30%);
-    margin: 1.250em 0 0 0;
+    margin: 0 0 0 0;
 
     .article-excerpt {
         color: @text-color;
@@ -45,11 +45,13 @@
                 text-transform: uppercase;
                 font-size: .9em;
             }
+        }
 
-            &:hover, &:focus {
-                color: @text-color;
-                background-color: @gray-lighter;
+        &:hover, &:focus {
+            color: @text-color;
+            background-color: @gray-lighter;
 
+            .article-excerpt-section {
                 .article-excerpt-direction {
                     color: @red;
                 }

@@ -13,13 +13,14 @@
     @font-size: 6.1em,
     @line-height: .8,
     @padding: 5px 12px 0 0) {
-    &:first-child:first-letter {
+    &:first-letter {
         color: @color;
         float: left;
         font-family: @font-family, @font-fallback;
         font-size: @font-size;
         line-height: @line-height;
         padding: @padding;
+        border: 3px solid @black;
     }
 }
 
@@ -48,6 +49,7 @@
     @text-decoration: none) {
         color: @color;
         font-family: @font-family, @font-fallback;
+        text-decoration: none;
         transition:all 0.3s ease;
 
         &:hover, &:focus {
@@ -91,7 +93,8 @@
     @align-items: baseline,
     @justify-content: flex-start,
     @padding: 0.375em 0.750em,
-    @margin: 0.500em 0) {
+    @margin: 0.500em 0,
+    @inset-shadow: 0.70) {
         display: @flex;
         flex-direction: @flex-direction;
         align-items: @align-items;
@@ -109,7 +112,7 @@
             background: @hover-background;
             text-decoration: @text-decoration;
             color: @hover-color;
-            .inset-shadow(@alpha: 0.70);
+            .inset-shadow(@alpha: @inset-shadow);
         }
 }
 

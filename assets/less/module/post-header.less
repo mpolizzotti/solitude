@@ -2,7 +2,7 @@
 -----------------------------------*/
 .post-header {
     background-color: @cream;
-    padding: 0 0 3em 0;
+    padding: 0 0 0 0;
 
     .post-header-inner {
         position: relative;
@@ -14,7 +14,7 @@
         background: @black url('../images/header-background.png') no-repeat 0 0;
         background-size: cover;
         border-bottom: 0.063em solid @black;
-        padding: 6.2em 0 7.3em 0;
+        padding: 7.2em 0 8.2em 0;
         .drop-shadow();
     }
 
@@ -25,7 +25,7 @@
         .blog-logo {
             padding: 1.1em 1.2em 0 0;
             img {
-                width: 3em;
+                width: 5em;
                 height: auto;
             }
         }
@@ -43,13 +43,32 @@
 
         .tags-container {
             padding: 0 1.7em 0 1.7em;
+
+            .tags-label {
+                .tags-label-list-item {
+                    .tag-label {
+                        .hover-box(
+                            @background: darken(@red, 10%),
+                            @border: darken(@red, 10%),
+                            @border-width: 0.188em,
+                            @margin: 0.500em 0.500em 0 0,
+                            @padding: 0.2em .5em,
+                            @color: @white,
+                            @hover-border: @black,
+                            @hover-background: @white,
+                            @hover-color: @black,
+                            @inset-shadow: 0
+                        );
+                    }
+                }
+            }
         }
 
         .title-container {
             padding: 0 1.7em 0 1.7em;
 
             .title {
-                font-family: @ekmukta-regular, @font-fallback;
+                font-family: @ekmukta-bold, @font-fallback;
                 font-size: 2.563em;
                 color: @white;
                 letter-spacing: .2em;
@@ -60,6 +79,7 @@
         .date-container {
             padding: 0 1.7em 0 1.7em;
             color: @gray-light;
+            text-transform: uppercase;
         }
     }
 
