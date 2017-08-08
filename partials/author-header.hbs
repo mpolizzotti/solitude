@@ -1,0 +1,56 @@
+<header>
+    <div class="author-header">
+        <div class="author-header-inner">
+            {{#if @blog.navigation}}
+                <nav id="navigationMenu" class="navigation-menu">
+                    <a id="menuButton" class="menu-button" href="javascript://" role="button">
+                        <i class="fa fa-bars" aria-hidden="true">
+                            <span class="sr-only">Open sidebar menu.</span>
+                        </i>
+                    </a>
+                </nav>
+            {{/if}}
+            <div class="brand-container">
+                <div class="blog-logo">
+                    <img src="{{asset "images/blog-logo.png"}}" class="img-responsive" alt="Blog Logo">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="post-count-container">
+                    <span class="posts-by-author">{{plural pagination.total empty='0 Posts' singular='% Post' plural='% Posts'}} By Author</span>
+                </div>
+
+                <div class="author-container">
+                    <span class="author-name">Matthew Polizzotti</span>
+                </div>
+
+                <div class="avatar-container">
+                    <div class="brand-avatar">
+                        {{#if @labs.publicAPI}}
+                            {{#get "users" limit="1"}}
+                                {{#foreach users}}
+                                    <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
+                                        <div class="brand-avatar-inner">&nbsp;</div>
+                                    </a>
+                                {{/foreach}}
+                            {{/get}}
+                        {{else}}
+                            <div class="brand-avatar-inner">&nbsp;</div>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="author-bio-container">
+                    <div class="author-bio">
+                        <p>Matthew is a husband, a father, a front-end architect, a javascript developer, a lifetime learner and an avid pearl jam fanatic!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="link-container">
+                <a class="back-to-blog" href="{{@blog.url}}"><span>Back to Blog</span></a>
+            </div>
+        </div>
+    </div>
+</header>
