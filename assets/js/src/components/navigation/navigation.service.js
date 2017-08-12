@@ -71,10 +71,14 @@ export class NavigationService {
             return;
         }
 
-        this.menuButton.removeEventListener('click', false);
+        if (this.menuButton && this.menuButton.hasOwnProperty('removeEventListener')) {
+            this.menuButton.removeEventListener('click', false);
+        }
         this.menuButton.addEventListener('click', (e) => this.toggleNavigationMenu(e), false);
 
-        this.navigationClose.removeEventListener('click', false);
+        if (this.navigationClose && this.navigationClose.hasOwnProperty('removeEventListener')) {
+            this.navigationClose.removeEventListener('click', false);
+        }
         this.navigationClose.addEventListener('click', (e) => this.toggleNavigationMenu(e), false);
     }
 }
