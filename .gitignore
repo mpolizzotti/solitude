@@ -7,3 +7,4 @@ assets/fonts/bootstrap/**
 jshint-output.log
 .DS_Store
 npm-debug.log
+me.json

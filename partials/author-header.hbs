@@ -22,28 +22,24 @@
                 </div>
 
                 <div class="author-container">
-                    <span class="author-name">Matthew Polizzotti</span>
+                    <span class="author-name">{{#author}}{{name}}{{/author}}</span>
                 </div>
 
                 <div class="avatar-container">
                     <div class="brand-avatar">
-                        {{#if @labs.publicAPI}}
-                            {{#get "users" limit="1"}}
-                                {{#foreach users}}
-                                    <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
-                                        <div class="brand-avatar-inner">&nbsp;</div>
-                                    </a>
-                                {{/foreach}}
-                            {{/get}}
-                        {{else}}
-                            <div class="brand-avatar-inner">&nbsp;</div>
-                        {{/if}}
+                        {{#author}}
+                            <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
+                                <div class="brand-avatar-inner">&nbsp;</div>
+                            </a>
+                        {{/author}}
                     </div>
                 </div>
 
                 <div class="author-bio-container">
                     <div class="author-bio">
-                        <p>Matthew is a husband, a father, a front-end architect, a javascript developer, a lifetime learner and an avid pearl jam fanatic!</p>
+                        {{#author}}
+                        <p>{{bio}}</p>
+                        {{/author}}
                     </div>
                 </div>
             </div>
