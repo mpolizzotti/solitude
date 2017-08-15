@@ -1,5 +1,6 @@
 import {NavigationService} from './components/navigation/navigation.service';
 import {TagsService} from './components/tags/tags.service';
+import {MeService} from './components/data/me.service';
 import {TwitterService} from './components/twitter/twitter.service';
 import {PageLoaderService} from './components/page-loader/page.loader.service'
 
@@ -18,6 +19,9 @@ export class Solitude {
 
         // Theme version.
         this._version = '1.0.0';
+
+        // Load additional 'me' data.
+        this.meService = new MeService();
 
         // Enable navigation (sidebar) menu.
         this.navigationService = new NavigationService();
