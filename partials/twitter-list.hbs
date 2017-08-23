@@ -5,8 +5,13 @@
         </h3>
     </header>
     <section id="twitterContent" class="twitter-content">
-        <a class="twitter-timeline" href="https://twitter.com/mpolizzotti">&nbsp;</a>
-        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{#if author}}
+            <a class="twitter-timeline" href="{{twitter_url author.twitter}}">&nbsp;</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{else}}
+            <a class="twitter-timeline" href="{{twitter_url @blog.twitter}}">&nbsp;</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {{/if}}
     </section>
     <section id="twitterContentError" class="twitter-content-error hidden">
         <p class="empty">Twitter feed is currently unavailable.</p>

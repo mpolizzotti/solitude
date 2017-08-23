@@ -29,7 +29,7 @@
                     <div class="brand-avatar">
                         {{#author}}
                             <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
-                                <div class="brand-avatar-inner">&nbsp;</div>
+                                <img class="brand-avatar-inner" src="{{profile_image}}" alt="{{name}}">
                             </a>
                         {{/author}}
                     </div>
@@ -38,7 +38,7 @@
                 <div class="author-bio-container">
                     <div class="author-bio">
                         {{#author}}
-                        <p>{{bio}}</p>
+                            <p>{{bio}}</p>
                         {{/author}}
                     </div>
                 </div>

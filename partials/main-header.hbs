@@ -14,10 +14,10 @@
                 <img src="{{asset "images/blog-logo.png"}}" class="img-responsive">
             </div>
             <div class="blog-tag-line primary">
-                <span>Front End Architect</span>
+                <span id="primaryOccupation">&nbsp;</span>
             </div>
             <div class="blog-tag-line secondary">
-                <span>JavaScript Developer</span>
+                <span id="secondaryOccupation">&nbsp;</span>
             </div>
         </div>
 
@@ -31,7 +31,7 @@
                         {{#get "users" limit="1"}}
                             {{#foreach users}}
                                 <a href="{{url}}" title="{{name}}" class="brand-avatar-link">
-                                    <div class="brand-avatar-inner">&nbsp;</div>
+                                    <img class="brand-avatar-inner" src="{{profile_image}}" alt="{{name}}">
                                 </a>
                             {{/foreach}}
                         {{/get}}
