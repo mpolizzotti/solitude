@@ -21,6 +21,8 @@ export class MeMappingService {
                 this.mapToEmail(key, me[key]);
             } else if (key === 'fullBio') {
                 this.mapToFullBio(key, me[key]);
+            } else if (key === 'social') {
+                this.mapToSocial(key, me[key]);
             } else {
                 this.mapToNode(key, me[key]);
             }
@@ -73,5 +75,32 @@ export class MeMappingService {
 
         nodes = Array.from(nodes);
         nodes.forEach((node) => node.innerHTML = value);
+    }
+
+    mapToSocial(key, value) {
+        if (!key && !value) {
+            return false;
+        }
+
+        let node = document.querySelector(`#${key}`);
+        let socialList = value;
+        let template = '';
+
+        if (!node) {
+            return false;
+        }
+
+        node.innerHTML = '';
+
+        socialList.forEach((social) => {
+            template +=
+                `<li class="social-media-list-item">
+                    <a class="social-media-icon" href="${social.href}" target="_blank">
+                        <i class="fa fa-${social.className}"><span class="sr-only">${social.label}</span></i>
+                    </a>
+                </li>`;
+        });
+
+        node.innerHTML = template;
     }
 }
