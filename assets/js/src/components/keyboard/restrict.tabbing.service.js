@@ -21,7 +21,7 @@ export class RestrictTabbingService {
     checkNodes() {
         let nodes = true;
 
-        if (!this.rootNode || this.selectors.length === 0) {
+        if (!this.rootNode || !this.body || this.selectors.length === 0) {
             console.info('RestrictTabbingService. Missing DOM nodes. The tabbing service is inoperable.');
             nodes = false;
         }
@@ -34,6 +34,8 @@ export class RestrictTabbingService {
             console.info('RestrictTabbingService. Missing DOM nodes. The tabbing service is inoperable.');
             return;
         }
+
+        this.body = document.querySelector('body');
 
         // The :scope syntax, used in conjunction with querySelectorAll is not yet supported by IE11.
         this.selectors = this.rootNode.querySelectorAll('a, button');
@@ -57,7 +59,7 @@ export class RestrictTabbingService {
             return;
         }
 
-        this.rootNode.addEventListener('keydown', this.keyDownListener, false);
+        this.body.addEventListener('keydown', this.keyDownListener, false);
     }
 
     disable() {
@@ -65,7 +67,7 @@ export class RestrictTabbingService {
             return;
         }
 
-        this.rootNode.removeEventListener('keydown', this.keyDownListener, false);
+        this.body.removeEventListener('keydown', this.keyDownListener, false);
     }
 
     calculateKeyDownFocus(e) {
@@ -84,6 +86,11 @@ export class RestrictTabbingService {
             activeElementId = activeElement.getAttribute('data-tabbing-id'),
             shiftKey = e.shiftKey,
             position = 0;
+
+        if (!activeElementId) {
+            activeElement = firstSelector;
+            activeElementId = firstSelectorId;
+        }
 
         for (let i = 0; i < this.selectors.length; i++) {
             let selectorId = this.selectors[i].getAttribute('data-tabbing-id');
