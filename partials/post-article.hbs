@@ -29,48 +29,34 @@
         </div>
     </section>
     <section class="post-article-author">
-        {{#author}}
+            {{#author}}
             <div class="post-author">
                 <div class="post-author-avatar">
                     <div class="brand-avatar">
                         <img class="brand-avatar-inner" src="{{profile_image}}" alt="{{name}}">
                     </div>
                 </div>
+                {{/author}}
+
                 <div class="post-author-meta">
                     <h4 class="post-author-title">About The Author</h4>
-                    {{#if bio}}
-                        <p class="post-author-bio">{{bio}}</p>
-                    {{else}}
-                        <p class="post-author-bio">
-                            <span>Read <a href="{{url}}">more posts</a> by this author.</span>
-                        </p>
-                    {{/if}}
-
-                    {{!--
-                    <div class="social-media">
-                        <h4 class="social-media-title">Follow</h4>
-                        <ul class="list-unstyled social-media-list">
-                            <li class="social-media-list-item">
-                                <a class="social-media-icon" href="https://twitter.com/mpolizzotti/" target="_blank">
-                                    <i class="fa fa-twitter"><span class="sr-only">Twitter</span></i>
-                                </a>
-                            </li>
-                            <li class="social-media-list-item">
-                                <a class="social-media-icon" href="https://www.linkedin.com/in/matthew-polizzotti-92a28652" target="_blank">
-                                    <i class="fa fa-linkedin"><span class="sr-only">Linkedin</span></i>
-                                </a>
-                            </li>
-                            <li class="social-media-list-item">
-                                <a class="social-media-icon" href="https://plus.google.com/100951874705247698641" target="_blank">
-                                    <i class="fa fa-google-plus"><span class="sr-only">Google+</span></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    --}}
+                    {{#author}}
+                        {{#if bio}}
+                            <p class="post-author-bio">{{bio}}</p>
+                        {{else}}
+                            <p class="post-author-bio">
+                                <span>Read <a href="{{url}}">more posts</a> by this author.</span>
+                            </p>
+                        {{/if}}
+                    {{/author}}
+                    {{#has author="Matthew Polizzotti"}}
+                        <div class="social-media">
+                            <h4 class="social-media-title">Follow</h4>
+                            <ul id="social" class="list-unstyled social-media-list">&nbsp;</ul>
+                        </div>
+                    {{/has}}
                 </div>
             </div>
-        {{/author}}
     </section>
 </article>
 {{/post}}
