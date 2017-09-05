@@ -1,0 +1,45 @@
+/* Comments
+-----------------------------------*/
+.comments {
+    padding: 0.625em 0 0 0;
+    .opacity(@opacity: 0);
+    transition: all 0.3s ease;
+
+    .comments-header {
+        font-family: @ekmukta-bold, @font-fallback;
+        text-transform: uppercase;
+
+        .comments-toggle {
+            display: flex;
+            flex-direction: row;
+            padding: 1.5em 0;
+            .hover-link(@color: @black, @font-family: @ekmukta-bold, @hover-color: darken(@red, 10%));
+        }
+
+        .comments-title {
+            margin: 0;
+            padding: 0 0 0 5px;
+            line-height: .75em;
+        }
+    }
+
+    .comments-content {
+        background-color: white;
+        overflow: hidden;
+        transition-property: height;
+        transition-duration: 250ms;
+        transition-timing-function: ease-out;
+
+        &.comments-content-closed {
+            height: 0;
+        }
+    }
+
+    &.comments-show {
+        .opacity(@opacity: 1);
+    }
+
+    &.comments-hide {
+        .opacity(@opacity: 0);
+    }
+}

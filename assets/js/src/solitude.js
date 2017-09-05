@@ -1,4 +1,5 @@
 import {NavigationService} from './components/navigation/navigation.service';
+import {CommentsService} from './components/comments/comments.service'
 import {TagsService} from './components/tags/tags.service';
 import {MeMappingService} from './components/me/me.mapping.service';
 import {TwitterService} from './components/twitter/twitter.service';
@@ -28,6 +29,9 @@ export class Solitude {
 
         // Map external 'me' context to templates.
         this.meMappingService = new MeMappingService();
+
+        // Enable comments for author posts.
+        this.commentsService = new CommentsService();
 
         // Reveal interface after site has loaded.
         this.pageLoaderService = new PageLoaderService();

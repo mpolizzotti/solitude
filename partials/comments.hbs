@@ -1,0 +1,16 @@
+{{!--This template must be placed within the #post block--}}
+<div id="commentsContainer" class="comments comments-hide">
+    <div class="comments-header">
+        <a id="commentsToggle" href="javascript:void(0);" class="comments-toggle">
+            <i class="fa fa-plus-square fa-lg" aria-hidden="true"></i>
+            <h4 class="comments-title">Comments</h4>
+        </a>
+    </div>
+    <div id="disqus_thread" class="comments-content comments-content-closed"></div>
+    <script id="disqus_config" type="text/javascript">
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = '{{comment_id}}';
+        };
+    </script>
+</div>
