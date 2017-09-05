@@ -82,15 +82,13 @@ export class MeMappingService {
             return false;
         }
 
-        let node = document.querySelector(`#${key}`);
+        let nodes = document.querySelectorAll(`ul[id^=${key}]`);
         let socialList = value;
         let template = '';
 
-        if (!node) {
+        if (!nodes.length) {
             return false;
         }
-
-        node.innerHTML = '';
 
         socialList.forEach((social) => {
             template +=
@@ -101,6 +99,7 @@ export class MeMappingService {
                 </li>`;
         });
 
-        node.innerHTML = template;
+        nodes = Array.from(nodes);
+        nodes.forEach((node) => node.innerHTML = template);
     }
 }
