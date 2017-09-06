@@ -93,7 +93,7 @@ export class MeMappingService {
         socialList.forEach((social) => {
             template +=
                 `<li class="social-media-list-item">
-                    <a class="social-media-icon" href="${social.href}" target="_blank">
+                    <a class="social-media-icon" href="${social.href}" target="_blank" title="${social.label}">
                         <i class="fa fa-${social.className}"><span class="sr-only">${social.label}</span></i>
                     </a>
                 </li>`;
