@@ -3,12 +3,11 @@ import {UtilService} from '../util/util.service';
 const MODULE_NAME = 'solitude.twitter.service';
 
 /**
-* The TwitterService class manages the loading of a twitter feed.
-*
-* @class
-* @type Class
-* @return public API
- */
+* The TwitterService class manages the loading of a twitter feed,
+* which has been configured through ghost on the underlying template.
+* The focus of this class is to add polish to the experience of loading
+* a twitter feed onto the page.
+*/
 export class TwitterService {
     constructor() {
         this.cacheNodes();

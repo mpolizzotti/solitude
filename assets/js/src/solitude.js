@@ -8,11 +8,7 @@ import {PageLoaderService} from './components/page-loader/page.loader.service'
 /**
 * Top-level class for the Solitude theme. This class bootstraps
 * the required JavaScript needed to run the Solitude theme.
-*
-* @class
-* @type Class
-* @return public API
- */
+*/
 export class Solitude {
     constructor() {
         // Theme version.

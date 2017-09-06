@@ -9,11 +9,7 @@ const MODULE_NAME = 'solitude.me.service';
 * of user data without having to hard-code values into the
 * templates. When/if ghost provides more granular storage
 * of user profiles this implementation can be removed.
-*
-* @class
-* @type Class
-* @return public API
- */
+*/
 export class MeService {
     constructor() {
         this._me = ME;

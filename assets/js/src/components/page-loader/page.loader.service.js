@@ -1,12 +1,8 @@
 const MODULE_NAME = 'solitude.page.loader.service';
 
 /**
-* The PageLoaderService class manages manipulates the showing
+* The PageLoaderService class manages and manipulates the showing
 * and hiding of the top-level page loader or spinner.
-*
-* @class
-* @type Class
-* @return public API
  */
 export class PageLoaderService {
     constructor() {

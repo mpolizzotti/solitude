@@ -7,11 +7,7 @@ const MODULE_NAME = 'solitude.tags.service';
 * on the author page to make them unique. Outputting unique
 * tags is not yet supported by Ghost and this implementation
 * provides a solution to resolve this issue.
-*
-* @class
-* @type Class
-* @return public API
- */
+*/
 export class TagsService {
     constructor() {
         this.cacheNodes();

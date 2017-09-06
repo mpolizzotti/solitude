@@ -5,10 +5,6 @@ const MODULE_NAME = 'solitude.restrict.tabbing.service';
 /**
 * The RestrictTabbingService class restricts keyboard tabbing, when enabled,
 * to the rootNode passed into the RestrictTabbingService class.
-*
-* @class
-* @type Class
-* @return public API
 */
 export class RestrictTabbingService {
     constructor(rootNode) {

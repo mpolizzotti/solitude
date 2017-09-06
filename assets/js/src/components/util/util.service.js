@@ -1,12 +1,9 @@
 const MODULE_NAME = 'solitude.util.service';
 
 /**
-* The UtilService class...
-*
-* @class
-* @type Class
-* @return public API
- */
+* The UtilService class provides a collection of
+* useful utilty methods.
+*/
 export class UtilService {
     constructor() {}
 

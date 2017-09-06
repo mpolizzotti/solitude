@@ -6,7 +6,7 @@ export const ME = {
     primaryOccupation: "",
     secondaryOccupation: "",
     email: "",
-    about: "",
+    fullBio: "",
     social: [
         {
             label: "Twitter",

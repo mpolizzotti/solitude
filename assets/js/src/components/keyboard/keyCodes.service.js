@@ -1,5 +1,6 @@
 /**
- * Service houses a common set of utilities for managing keyboard events and their keycodes.
+ * Service houses a common set of utilities for
+ * managing keyboard events and their keycodes.
  */
 
 export const BACKSPACE = 8;

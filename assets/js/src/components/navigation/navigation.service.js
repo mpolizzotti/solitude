@@ -5,11 +5,7 @@ const MODULE_NAME = 'solitude.navigation.service';
 /**
 * The NavigationService class manages the opening and closing of
 * the sidebar navigation menu.
-*
-* @class
-* @type Class
-* @return public API
- */
+*/
 export class NavigationService {
     constructor() {
         this.isNavigationOpen = false;

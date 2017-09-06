@@ -4,7 +4,8 @@ const MODULE_NAME = 'solitude.comments.service';
 
 /**
 * The CommentsService class manages the opening and closing of
-* the comments section under each author post.
+* the comments section under each author post. Comments currently
+* are driven by the disqus platform.
 *
 * @class
 * @type Class

@@ -6,12 +6,8 @@ const MODULE_NAME = 'solitude.me.mapping.service';
 * The meMapping class maps external user data from the me.service
 * to the underlying templates. The Ghost blogging platform does
 * not expose all the user data desired at this time. This
-* implementation may become obsolete in time.
-*
-* @class
-* @type Class
-* @return public API
- */
+* implementation may become obsolete in the future.
+*/
 export class MeMappingService {
     constructor() {
         this.meService = new MeService();
