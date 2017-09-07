@@ -10,7 +10,8 @@ export const ME = {
     social: [
         {
             label: "Twitter",
-            href: ""
+            href: "",
+            className: "twitter"
         }
     ]
 };
