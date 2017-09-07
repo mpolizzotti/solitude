@@ -8,6 +8,7 @@ requireDir('./build', { recurse: true });
 requireDir('./copy', { recurse: true });
 requireDir('./test', { recurse: true });
 requireDir('./develop', { recurse: true });
+requireDir('./package', { recurse: true });
 
 // gulp command.
 gulp.task('default', () => {
@@ -38,6 +39,22 @@ gulp.task('test', () => {
         'test:jscs',
         'test:jshint',
         'test:karma'
+    );
+});
+
+// gulp package command.
+gulp.task('package', () => {
+    'use strict';
+
+    runSequence(
+        'package:clean',
+        'package:css',
+        'package:fonts',
+        'package:js',
+        'package:images',
+        'package:partials',
+        'package:templates',
+        'package:zip'
     );
 });
 

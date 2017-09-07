@@ -5,6 +5,7 @@ assets/js/min/**
 assets/js/src/components/me/me.js
 assets/fonts/font-awesome/**
 assets/fonts/bootstrap/**
+package/**
 jshint-output.log
 .DS_Store
 npm-debug.log
