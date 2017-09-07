@@ -47,6 +47,7 @@ gulp.task('package', () => {
     'use strict';
 
     runSequence(
+        'build',
         'package:clean',
         'package:css',
         'package:fonts',
