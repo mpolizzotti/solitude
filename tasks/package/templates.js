@@ -3,7 +3,7 @@ let gulp = require('gulp'),
     config = require('../../config'),
     path = require('path');
 
-// Copy libraries.
+// Package libraries.
 gulp.task('package:templates', () => {
     'use strict';
 

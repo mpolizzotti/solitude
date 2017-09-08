@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     config = require('../../config'),
     path = require('path');
 
-// Copy libraries.
+// Package libraries.
 gulp.task('package:zip', () => {
     'use strict';
 
@@ -12,6 +12,6 @@ gulp.task('package:zip', () => {
     let destinationPath = config.package.paths.root;
 
     return gulp.src(sourcePath)
-        .pipe(zip('solitude.zip'))
+        .pipe(zip('solitude.2.0.zip'))
         .pipe(gulp.dest(destinationPath));
 });

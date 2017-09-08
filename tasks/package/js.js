@@ -12,7 +12,7 @@ function copyHelper(source, destination) {
         .pipe(gulp.dest(destination));
 }
 
-    // Copy libraries.
+// Package libraries.
 gulp.task('package:js', () => {
     'use strict';
 

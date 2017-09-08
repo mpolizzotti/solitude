@@ -55,6 +55,7 @@ gulp.task('package', () => {
         'package:images',
         'package:partials',
         'package:templates',
+        'package:package',
         'package:zip'
     );
 });
