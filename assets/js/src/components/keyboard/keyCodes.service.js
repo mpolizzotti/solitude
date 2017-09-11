@@ -19,7 +19,8 @@ export const NUM_NINE = 57;
 
 /**
  * Determines if a keycode belongs to a number key.
- * @param keyCode {number} the code of the key pressed, generally pulled from event.which
+ *
+ * @param {number} keyCode the code of the key pressed, generally pulled from event.which
  * @returns {boolean} whether or not it's a number key
  */
 export function isNumberKey(keyCode) {

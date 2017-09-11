@@ -66,8 +66,11 @@ export class TagsService {
         }
 
         this.tagsList.innerHTML = '';
+
         for (let tag in tagsMap) {
-            this.tagsList.appendChild(tagsMap[tag]);
+            if (tagsMap.hasOwnProperty(tag)) {
+                this.tagsList.appendChild(tagsMap[tag]);
+             }
         }
         this.tagsLoader.classList.add('tags-loaded');
     }
