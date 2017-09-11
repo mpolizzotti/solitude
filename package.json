@@ -1,7 +1,7 @@
 {
   "name": "solitude",
   "version": "1.0.0",
-  "description": "This repository houses the solitude ghost theme for the ghost blogging platform.",
+  "description": "This repository houses the development environment required to build the solitude ghost theme for the ghost blogging platform.",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
@@ -16,7 +16,7 @@
   "author": {
     "email": "matthew.polizzotti@gmail.com"
   },
-  "license": "AGPL-3.0",
+  "license": "MIT",
   "config": {
     "posts_per_page": 10
   },
