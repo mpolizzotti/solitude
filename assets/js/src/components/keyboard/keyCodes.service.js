@@ -23,5 +23,6 @@ export const NUM_NINE = 57;
  * @returns {boolean} whether or not it's a number key
  */
 export function isNumberKey(keyCode) {
+    'use strict';
     return keyCode >= NUM_ZERO && keyCode <= NUM_NINE;
 }

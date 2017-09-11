@@ -12,42 +12,42 @@ gulp.task('package:package', () => {
     let destinationFile = path.join(config.package.paths.theme, 'package.json');
 
     let packageObj = {
-        name: "solitude",
-        description: "Solitude is a modern and responsive theme for the ghost blogging platform.",
-        version: "1.0.0",
-        main: "index.hbs",
+        name: 'solitude',
+        description: 'Solitude is a modern and responsive theme for the ghost blogging platform.',
+        version: '1.0.0',
+        main: 'index.hbs',
         engines: {
-            ghost: ">=1.0.0"
+            ghost: '>=1.0.0'
         },
-        license: "MIT",
+        license: 'MIT',
         author: {
-            name: "Matthew Polizzotti",
-            email: "matthew.polizzotti@gmail.com",
-            url: "matthewpolizzotti.com"
+            name: 'Matthew Polizzotti',
+            email: 'matthew.polizzotti@gmail.com',
+            url: 'matthewpolizzotti.com'
         },
         config: {
             posts_per_page: 10
         },
         gpm: {
-            type: "theme",
+            type: 'theme',
             categories: [
-                "Minimal",
-                "Personal Blogs"
+                'Minimal',
+                'Personal Blogs'
             ]
         },
         screenshots: {
-            desktop: "assets/screenshot-desktop.jpg",
-            mobile: "assets/screenshot-mobile.jpg"
+            desktop: 'assets/screenshot-desktop.jpg',
+            mobile: 'assets/screenshot-mobile.jpg'
         },
         repository: {
-            type: "git",
-            url: "git+https://github.com/mpolizzotti/solitude.git"
+            type: 'git',
+            url: 'git+https://github.com/mpolizzotti/solitude.git'
         },
         bugs: {
-            url: "https://github.com/mpolizzotti/solitude/issues"
+            url: 'https://github.com/mpolizzotti/solitude/issues'
         },
-        homepage: "https://github.com/mpolizzotti/solitude#readme",
-        demo: "matthewpolizzotti.com"
+        homepage: 'https://github.com/mpolizzotti/solitude#readme',
+        demo: 'matthewpolizzotti.com'
     };
 
     jsonFile.writeFile(destinationFile, packageObj, (err) => {

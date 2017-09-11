@@ -46,7 +46,6 @@ export class RestrictTabbingService {
             return;
         }
 
-
         this.selectors[0].focus();
     }
 
@@ -122,7 +121,7 @@ export class RestrictTabbingService {
         if (e.keyCode === keyCodes.TAB) {
             e.preventDefault();
             e.stopImmediatePropagation();
-            this.calculateKeyDownFocus(e)
+            this.calculateKeyDownFocus(e);
         }
     }
 }

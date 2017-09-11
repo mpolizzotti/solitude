@@ -1,9 +1,9 @@
 import {NavigationService} from './components/navigation/navigation.service';
-import {CommentsService} from './components/comments/comments.service'
+import {CommentsService} from './components/comments/comments.service';
 import {TagsService} from './components/tags/tags.service';
 import {MeMappingService} from './components/me/me.mapping.service';
 import {TwitterService} from './components/twitter/twitter.service';
-import {PageLoaderService} from './components/page-loader/page.loader.service'
+import {PageLoaderService} from './components/page-loader/page.loader.service';
 
 /**
 * Top-level class for the Solitude theme. This class bootstraps
