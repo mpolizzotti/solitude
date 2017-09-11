@@ -17,6 +17,9 @@
     "email": "matthew.polizzotti@gmail.com"
   },
   "license": "AGPL-3.0",
+  "config": {
+    "posts_per_page": 10
+  },
   "bugs": {
     "url": "https://github.com/mpolizzotti/solitude/issues"
   },
