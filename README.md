@@ -1,3 +1,5 @@
+> Instructions for this README are currently in development. Completed instructions should become available September 15th, 2017.
+
 # Solitude
 This repository houses a modern and minimalist theme for the [Ghost](https://ghost.org/) blogging platform. In addition, this repository houses a development setup that can be leveraged to customize the Solitude theme and it's associated features.
 
