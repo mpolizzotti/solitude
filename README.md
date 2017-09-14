@@ -55,3 +55,6 @@ You also need to install gulp with the `-g` parameter. The `-g` installs gulp gl
     npm install -g gulp
 
 Once complete, the **node_modules** directory, containing all of the theme's node modules will be added to the theme directory structure.
+
+## Configure me.js
+Outside of a few fields, the Ghost platform does not provide the ability to store additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. This type of additional metadata may one day be added to the Ghost platform. The Solitude theme requires this additional metadata within its implementation, however, we didn't want to hard-code user values into the theme. To solve this issue, the Solitude theme ships with a `me.template.js` file.
