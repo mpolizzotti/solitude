@@ -1,4 +1,3 @@
-> Instructions for this README are currently in development. Completed instructions should become available September 15th, 2017.
 
 # Solitude
 This repository houses a modern and minimalist theme for the [Ghost](https://ghost.org/) blogging platform. In addition, this repository houses a development setup that can be leveraged to customize the Solitude theme and it's associated features.
@@ -57,4 +56,57 @@ You also need to install gulp with the `-g` parameter. The `-g` installs gulp gl
 Once complete, the **node_modules** directory, containing all of the theme's node modules will be added to the theme directory structure.
 
 ## Configure me.js
-Outside of a few fields, the Ghost platform does not provide the ability to store additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. This type of additional metadata may one day be added to the Ghost platform. The Solitude theme requires this additional metadata within its implementation, however, we didn't want to hard-code user values into the theme. To solve this issue, the Solitude theme ships with a `me.template.js` file.
+Outside of a few fields, the Ghost platform does not provide the ability for an author to store and retrieve additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. The Solitude theme requires this additional metadata to build out portions of the theme, however, we didn't want to hard-code author-specific values into the theme. To solve this issue, the Solitude theme ships with a `me.template.js` file. The `me.template.js` contains additional author properties such as `firstName`, `lastName`, `email` and other properties. The values contained within the `me.template.js` file are used to populate portions of the **header**, **footer** and **slide out menu**. By default the `me.template.js` file contains empty values as it is only a template. To configure the `me` context perform the following actions:
+
+From a terminal window navigate to the `me` component directory.
+
+	cd path/to/ghost/content/themes/solitude/assets/js/src/components/me
+
+Copy the `me.template.js` and rename it `me.js`
+
+	cp me.template.js me.js
+
+Populate the author properties within the `me.js` file.
+
+	const MODULE_NAME = "solitude.me";
+	
+	export const ME = {
+	    firstName: "Tiberius",
+	    lastName: "Kirk",
+	    primaryOccupation: "Starfleet Officer",
+	    secondaryOccupation: "Chairmen of the United Federation of Planets",
+	    email: "tkirk@starfleet.com",
+	    fullBio: "The only student at Starfleet Academy to defeat the Kobayashi Maru.",
+	    social: [
+	        {
+	            label: "Twitter",
+	            href: "https://twitter.com/<username-identifier>",
+	            className: "twitter",
+	        },
+	        {
+	            label: "Google+",
+	            href: "https://plus.google.com/u/0/<username-identifier>",
+	            className: "google-plus",
+	        },
+	        {
+	            label: "Linkedin",
+	            href: "https://www.linkedin.com/in/<username-identifier>",
+	            className: "linkedin",
+	        },
+	        {
+	            label: "Github",
+	            href: "https://github.com/<username-identifier>",
+	            className: "github"
+	        },
+	        {
+	            label: "Codepen",
+	            href: "https://codepen.io/<username-identifier>",
+	            className: "codepen"
+	        }
+	    ]
+	};
+
+Once the `me.js` file is in place you can build the theme.
+
+## Build
+_Coming Soon_
