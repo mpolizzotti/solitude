@@ -28,7 +28,7 @@ export class TagsService {
         this.tagsList = document.querySelector('#tagsList');
 
         if (this.tagsList) {
-            this.tags = this.tagsList.querySelectorAll(':scope li');
+            this.tags = this.tagsList.querySelectorAll('li');
         }
 
         this.tagsLoader = document.querySelector('#tagsLoader');
