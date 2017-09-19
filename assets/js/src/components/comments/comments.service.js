@@ -10,7 +10,7 @@ const MODULE_NAME = 'solitude.comments.service';
 * @class
 * @type Class
 * @return public API
- */
+*/
 export class CommentsService {
     constructor() {
         this.isCommentsOpen = false;
