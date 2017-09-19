@@ -40,7 +40,7 @@ export class TwitterService {
         }
 
         let t = setTimeout(() => {
-            let children = this.twitterContent.querySelectorAll(':scope iframe');
+            let children = this.twitterContent.querySelectorAll('iframe');
             if (children.length === 0) {
                 if (this.counter < this.threshold) {
                     this.counter = this.counter + 1;
