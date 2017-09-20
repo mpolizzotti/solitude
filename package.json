@@ -34,7 +34,7 @@
     "url": "https://github.com/mpolizzotti/solitude/issues"
   },
   "homepage": "https://github.com/mpolizzotti/solitude#readme",
-  "demo": "matthewpolizzotti.com",
+  "demo": "www.matthewpolizzotti.com",
   "scripts": {
     "build": "gulp build",
     "package": "gulp package",
