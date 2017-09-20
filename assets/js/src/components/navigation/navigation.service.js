@@ -17,7 +17,7 @@ export class NavigationService {
     checkNodes() {
         let nodes = true;
 
-        if (!this.siteWrapper || !this.menuButton ||
+        if (!this.body || !this.siteWrapper || !this.menuButton ||
             !this.navigationSidebarMask || !this.navigationClose) {
                 console.info('NavigationService. Missing DOM nodes. The navigation menu is inoperable.');
                 nodes = false;
@@ -27,6 +27,7 @@ export class NavigationService {
     }
 
     cacheNodes() {
+        this.body = document.querySelector('body');
         this.siteWrapper = document.querySelector('#siteWrapper');
         this.menuButton = document.querySelector('#menuButton');
         this.navigationSidebar = document.querySelector('#navigationSidebar');
@@ -52,11 +53,13 @@ export class NavigationService {
         if (!this.isNavigationOpen) {
             this.siteWrapper.classList.remove('navigation-open');
             this.siteWrapper.classList.add('navigation-close');
+            this.body.classList.remove('no-scroll');
             this.restrictTabbingService.disable();
             this.menuButton.focus();
         } else {
             this.siteWrapper.classList.remove('navigation-close');
             this.siteWrapper.classList.add('navigation-open');
+            this.body.classList.add('no-scroll');
             this.restrictTabbingService.enable();
             this.navigationClose.focus();
         }
