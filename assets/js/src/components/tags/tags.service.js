@@ -10,6 +10,11 @@ const MODULE_NAME = 'solitude.tags.service';
 */
 export class TagsService {
     constructor() {
+        if (!this.doTagsExist()) {
+            document.querySelector('#tagsLoader').classList.add('tags-loaded');
+            return;
+        }
+
         this.cacheNodes();
         this.injectUniqueTags(this.buildUniqueTagsMap());
     }
@@ -26,12 +31,15 @@ export class TagsService {
 
     cacheNodes() {
         this.tagsList = document.querySelector('#tagsList');
+        this.tagsLoader = document.querySelector('#tagsLoader');
 
         if (this.tagsList) {
             this.tags = this.tagsList.querySelectorAll('li');
         }
+    }
 
-        this.tagsLoader = document.querySelector('#tagsLoader');
+    doTagsExist() {
+        return (document.querySelector('#tagsList')) ? true : false;
     }
 
     buildUniqueTagsMap() {
