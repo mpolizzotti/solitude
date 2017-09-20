@@ -55,6 +55,7 @@ gulp.task('package', () => {
         'package:partials',
         'package:templates',
         'package:package',
+        'package:clean:maps',
         'package:zip'
     );
 });
