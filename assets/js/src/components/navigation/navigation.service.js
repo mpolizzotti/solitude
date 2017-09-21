@@ -62,14 +62,12 @@ export class NavigationService {
             this.siteWrapper.classList.remove('navigation-open');
             this.siteWrapper.classList.add('navigation-close');
             this.body.classList.remove('no-scroll');
-            this.body.addEventListener('touchmove', this.onTouchMove, false);
             this.restrictTabbingService.disable();
             this.menuButton.focus();
         } else {
             this.siteWrapper.classList.remove('navigation-close');
             this.siteWrapper.classList.add('navigation-open');
             this.body.classList.add('no-scroll');
-            this.body.removeEventListener('touchmove', this.onTouchMove, false);
             this.restrictTabbingService.enable();
             this.navigationClose.focus();
         }
