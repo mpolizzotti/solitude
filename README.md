@@ -109,9 +109,9 @@ Populate the author properties within the `me.js` file.
 Once the `me.js` file is in place you can build the theme.
 
 ## Build
-The `npm run build` command runs several operations for the Solitude theme, such as copying fonts, compiling css and transpiling and minifying JavaScript code into the the respective sub-directories of the `/assets` theme directory. The Solitude theme is configured to always run with compressed, transpiled and minified code. For debugging purposes, source maps are also provided (_Source maps are stripped out of the build with the `npm run package` command_).
+The `npm run build` command runs several operations for the Solitude theme, such as copying fonts, compiling css and transpiling and minifying JavaScript code into their respective sub-directories of the `/assets` theme directory. The Solitude theme is configured to always run with compressed, transpiled and minified code. For debugging purposes, source maps are also provided (_Source maps are stripped out of the build with the `npm run package` command_).
 
-To build the Solitude theme perform the following actions:
+To **build** the Solitude theme perform the following actions:
 
 From a terminal window navigate to the root of the `solitude` theme.
 
@@ -122,4 +122,16 @@ Run the `npm run build` command.
 	npm run build
 
 ## Watch
-_Coming Soon_
+The `npm run watch` command will watch for changes to Less and JavaScript files and automatically recompile those assets into their respective sub-directories of the `/assets` directory.
+
+To run a **watch** on the Solitude theme perform the following actions:
+
+From a terminal window navigate to the root of the `solitude` theme.
+
+	cd path/to/ghost/content/themes/solitude
+
+Run the `npm run watch` command.
+
+	npm run watch
+
+You can exit the watch using `ctrl + c`.
