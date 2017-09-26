@@ -136,7 +136,7 @@ Run the `npm run watch` command.
 
 You can exit the watch using `ctrl + c`.
 
-##Lint
+## Lint
 The Solitude theme also ships with linting and formatting tasks based upon [jshint](http://jshint.com/) and [jscs](http://jscs.info/) rules and styleguides.
 
 To run **linting** on the Solitude theme perform the following actions:
