@@ -122,7 +122,7 @@ Run the `npm run build` command.
 	npm run build
 
 ## Watch
-The `npm run watch` command will watch for changes to Less and JavaScript files and automatically recompile those assets into their respective sub-directories of the `/assets` directory.
+The `npm run watch` command will watch for changes to the theme's **Less** and **JavaScript** files and automatically recompile those assets into their respective sub-directories under the `/assets` directory.
 
 To run a **watch** on the Solitude theme perform the following actions:
 
@@ -135,3 +135,18 @@ Run the `npm run watch` command.
 	npm run watch
 
 You can exit the watch using `ctrl + c`.
+
+##Lint
+The Solitude theme also ships with linting and formatting rules based upon [jshint](http://jshint.com/) and [jscs](http://jscs.info/) rules and styleguides.
+
+To run **linting** on the Solitude theme perform the following actions:
+
+From a terminal window navigate to the root of the `solitude` theme.
+
+	cd path/to/ghost/content/themes/solitude
+
+Run the `npm run test` command.
+
+	npm run test
+
+The `test` command will execute both `gulp test:jshint` and `gulp:jscs` tasks.
