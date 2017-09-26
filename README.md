@@ -56,7 +56,7 @@ You also need to install gulp with the `-g` parameter. The `-g` installs gulp gl
 Once complete, the **node_modules** directory, containing all of the theme's node modules will be added to the theme directory structure.
 
 ## Configure me.js
-Outside of a few fields, the Ghost platform does not provide the ability for an author to store and retrieve additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. The Solitude theme requires this additional metadata to build out portions of the theme, however, we didn't want to hard-code author-specific values into the theme. To solve this issue, the Solitude theme ships with a `me.template.js` file. The `me.template.js` contains additional author properties such as `firstName`, `lastName`, `email` and other properties. The values contained within the `me.template.js` file are used to populate portions of the **header**, **footer** and **slide out menu**. By default the `me.template.js` file contains empty values as it is only a template. To configure the `me` context perform the following actions:
+Outside of a few fields, the Ghost platform does not provide the ability for an author to store and retrieve additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. The Solitude theme requires this additional metadata to build out portions of the theme, however, we didn't want to hard-code author-specific values into the theme and we didn't want to write a custom implementation to force this information into the platform. To solve this issue, the Solitude theme ships with a `me.template.js` file. The `me.template.js` contains additional author properties such as `firstName`, `lastName`, `email` and other properties. The values contained within the `me.template.js` file are used to populate portions of the **header**, **footer**, **social media links** and **slide out menu**. By default the `me.template.js` file contains empty values as it is only a template. To configure the `me` context perform the following actions:
 
 From a terminal window navigate to the `me` component directory.
 
@@ -105,6 +105,8 @@ Populate the author properties within the `me.js` file.
 	        }
 	    ]
 	};
+
+**Please note: ** The `social:[]` array described in the above `configuration object` contains a `className` property. The Solitude theme is configured with the [font-awesome](http://fontawesome.io/) icon set and the values within the `className` property correspond to the font-based icons provided by the [font-awesome](http://fontawesome.io/) library.
 
 Once the `me.js` file is in place you can build the theme.
 
