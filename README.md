@@ -106,7 +106,7 @@ Populate the author properties within the `me.js` file.
 	    ]
 	};
 
-**Please note: ** The `social:[]` array described in the above `configuration object` contains a `className` property. The Solitude theme is configured with the [font-awesome](http://fontawesome.io/) icon set and the values within the `className` property correspond to the font-based icons provided by the [font-awesome](http://fontawesome.io/) library.
+**Please note:** The `social:[]` array described in the above `configuration object` contains a `className` property. The Solitude theme is configured with the [font-awesome](http://fontawesome.io/) icon set and the values within the `className` property correspond to the font-based icons provided by the [font-awesome](http://fontawesome.io/) library.
 
 Once the `me.js` file is in place you can build the theme.
 
