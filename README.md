@@ -136,8 +136,8 @@ Run the `npm run watch` command.
 
 You can exit the watch using `ctrl + c`.
 
-## Lint
-The Solitude theme also ships with linting and formatting rules based upon [jshint](http://jshint.com/) and [jscs](http://jscs.info/) rules and styleguides.
+##Lint
+The Solitude theme also ships with linting and formatting tasks based upon [jshint](http://jshint.com/) and [jscs](http://jscs.info/) rules and styleguides.
 
 To run **linting** on the Solitude theme perform the following actions:
 
@@ -150,3 +150,18 @@ Run the `npm run test` command.
 	npm run test
 
 The `test` command will execute both `gulp test:jshint` and `gulp:jscs` tasks.
+
+## Package
+Once all adjustments have been made and development concludes, you can execute the `npm run package` command to package the Solitude theme into a production-ready zip file. The zip file can then be uploaded and installed into your Ghost blog.
+
+To **package** the Solitude theme perform the following actions:
+
+From a terminal window navigate to the root of the `solitude` theme.
+
+	cd path/to/ghost/content/themes/solitude
+
+Run the `npm run package` command.
+
+	npm run package
+
+The production-ready theme will output to the `path/to/ghost/content/themes/solitude/package` directory. The generated zip file follows the following syntax: `solitude.VERSION.zip` where the `VERSION` number is replaced by the `version` value in the theme's `package.json` file. For example, as of this writing the generated zip file would be `solitude.1.0.0.zip`.
