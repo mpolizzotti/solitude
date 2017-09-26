@@ -164,4 +164,4 @@ Run the `npm run package` command.
 
 	npm run package
 
-The production-ready theme will output to the `path/to/ghost/content/themes/solitude/package` directory. The generated zip file follows the following syntax: `solitude.VERSION.zip` where the `VERSION` number is replaced by the `version` value in the theme's `package.json` file. For example, as of this writing the generated zip file would be `solitude.1.0.0.zip`.
+The production-ready theme will output to the `path/to/ghost/content/themes/solitude/package` directory. The generated zip file follows the following syntax: `solitude.VERSION.zip` where the `VERSION` number is replaced by the `version` value in the theme's `package.json` file. For example, as of this writing, the generated zip file would be named `solitude.1.0.0.zip`.
