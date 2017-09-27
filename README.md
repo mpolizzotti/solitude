@@ -193,4 +193,4 @@ The production-ready theme will output to the `path/to/ghost/content/themes/soli
 ----------
 
 # Contributing
-If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](contributing.md) guide.
+If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](CONTRIBUTING.md) guide.
