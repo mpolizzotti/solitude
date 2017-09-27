@@ -11,7 +11,7 @@ This repository houses a modern and minimalist theme for the [Ghost](https://gho
 	- [Install Ghost](#install-ghost)
 	- [Install Solitude](#install-solitude)
 	- [Install Solitude Dependencies](#install-solitude-dependencies)
-	- [Configure me.js](#configure-me.js)
+	- [Configure me.js](#configure-me)
 - [Development](#development)
 	- [Build](#build)
 	- [Watch](#watch)
@@ -73,7 +73,7 @@ You also need to install gulp with the `-g` parameter. The `-g` installs gulp gl
 
 Once complete, the **node_modules** directory, containing all of the theme's node modules will be added to the theme directory structure.
 
-## Configure me.js
+## Configure me
 Outside of a few fields, the Ghost platform does not provide the ability for an author to store and retrieve additional data such as an email address, occupation titles or social media links outside of Twitter and Facebook. The Solitude theme requires this additional metadata to build out portions of the theme, however, we didn't want to hard-code author-specific values into the theme and we didn't want to write a custom implementation to force this information into the platform. To solve this issue, the Solitude theme ships with a `me.template.js` file. The `me.template.js` contains additional author properties such as `firstName`, `lastName`, `email` and other properties. The values contained within the `me.template.js` file are used to populate portions of the **header**, **footer**, **social media links** and **slide out menu**. By default the `me.template.js` file contains empty values as it is only a template. To configure the `me` context perform the following actions:
 
 From a terminal window navigate to the `me` component directory.
@@ -193,4 +193,4 @@ The production-ready theme will output to the `path/to/ghost/content/themes/soli
 ----------
 
 # Contributing
-If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](CONTRIBUTING.md) guide.
+If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](contributing.md) guide.
