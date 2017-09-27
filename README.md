@@ -7,11 +7,11 @@ This repository houses a modern and minimalist theme for the [Ghost](https://gho
 # Contents
 
 - [Setting Up](#setting-up)
-	- [Install Node & NPM](#install-node-npm)
+	- [Install Node and NPM](#install-node-and-npm)
 	- [Install Ghost](#install-ghost)
 	- [Install Solitude](#install-solitude)
 	- [Install Solitude Dependencies](#install-solitude-dependencies)
-	- [Configure me.js](#configure-me)
+	- [Configure me](#configure-me)
 - [Development](#development)
 	- [Build](#build)
 	- [Watch](#watch)
@@ -24,7 +24,7 @@ This repository houses a modern and minimalist theme for the [Ghost](https://gho
 
 # Setting Up
 
-## Install Node & NPM
+## Install Node and NPM
 The Ghost platform as well as the Solitude theme make use of [node.js](http://nodejs.org/) and [npm](https://npmjs.org/), a package manager for installing node modules. The latest releases of node ships with npm so only a node installation is required. Node offers platform installers for both Windows and Mac OSX. They also offer binaries for Windows, Mac OSX and Linux systems. Visit the [download](http://nodejs.org/download/) page for more information.
 
 To verify your node installation, open a terminal and enter the `node -v` command:
