@@ -4,6 +4,24 @@ This repository houses a modern and minimalist theme for the [Ghost](https://gho
 
 ----------
 
+# Contents
+
+- [Setting Up](#setting-up)
+	- [Install Node & NPM](#install-node-npm)
+	- [Install Ghost](#install-ghost)
+	- [Install Solitude](#install-solitude)
+	- [Install Solitude Dependencies](#install-solitude-dependencies)
+	- [Configure me.js](#configure-me.js)
+- [Development](#development)
+	- [Build](#build)
+	- [Watch](#watch)
+	- [Lint](#lint)
+	- [Package](#package)
+- [Contributing](#contributing)
+
+----------
+
+
 # Setting Up
 
 ## Install Node & NPM
@@ -106,9 +124,13 @@ Populate the author properties within the `me.js` file.
 	    ]
 	};
 
-**Please note:** The `social:[]` array described in the above `configuration object` contains a `className` property. The Solitude theme is configured with the [font-awesome](http://fontawesome.io/) icon set and the values within the `className` property correspond to the font-based icons provided by the [font-awesome](http://fontawesome.io/) library.
+**Please note: ** The `social:[]` array described in the above `configuration object` contains a `className` property. The Solitude theme is configured with the [font-awesome](http://fontawesome.io/) icon set and the values within the `className` property correspond to the font-based icons provided by the [font-awesome](http://fontawesome.io/) library.
 
-Once the `me.js` file is in place you can build the theme.
+Once the `me.js` file is in place you are ready to build the theme.
+
+----------
+
+# Development
 
 ## Build
 The `npm run build` command runs several operations for the Solitude theme, such as copying fonts, compiling css and transpiling and minifying JavaScript code into their respective sub-directories of the `/assets` theme directory. The Solitude theme is configured to always run with compressed, transpiled and minified code. For debugging purposes, source maps are also provided (_Source maps are stripped out of the build with the `npm run package` command_).
@@ -167,3 +189,8 @@ Run the `npm run package` command.
 	npm run package
 
 The production-ready theme will output to the `path/to/ghost/content/themes/solitude/package` directory. The generated zip file follows the following syntax: `solitude.VERSION.zip` where the `VERSION` number is replaced by the `version` value in the theme's `package.json` file. For example, as of this writing, the generated zip file would be named `solitude.1.0.0.zip`.
+
+----------
+
+# Contributing
+If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](CONTRIBUTING.md) guide.
