@@ -199,4 +199,4 @@ If you would like to contribute to the Solitude theme and make it better please 
 ----------
 
 # Demo
-If you would like to see the Solitude theme in action you can preview the latest version by visiting [matthewpolizzotti.com](matthewpolizzotti.com) guide.
+If you would like to see the Solitude theme in action you can preview the latest version by visiting [matthewpolizzotti.com](https://matthewpolizzotti.com/) guide.
