@@ -18,6 +18,7 @@ This repository houses a modern and minimalist theme for the [Ghost](https://gho
 	- [Lint](#lint)
 	- [Package](#package)
 - [Contributing](#contributing)
+- [Demo](#demo)
 
 ----------
 
@@ -194,3 +195,8 @@ The production-ready theme will output to the `path/to/ghost/content/themes/soli
 
 # Contributing
 If you would like to contribute to the Solitude theme and make it better please follow the steps outlined in the [contributing](CONTRIBUTING.md) guide.
+
+----------
+
+# Demo
+If you would like to see the Solitude theme in action you can preview the latest version by visiting [matthewpolizzotti.com](matthewpolizzotti.com) guide.
