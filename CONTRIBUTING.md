@@ -37,9 +37,9 @@ Folder names should be lowercased. When needed, longer folder names should be se
             /js
                 /src
                     /components
-                    /navigation
-                    /page-loader
-                    /comments
+                        /navigation
+                        /page-loader
+                        /comments
 
 ## JavaScript Naming
 
