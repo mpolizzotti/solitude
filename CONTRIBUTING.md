@@ -28,18 +28,18 @@ Folder names should be lowercased. When needed, longer folder names should be se
 
 ### *Example*
 
-	/solitude
-	   /assets
-		   /css
-		   /fonts
-		   /images
-		   /less
-		   /js
-			   /src
-				   /components
-					   /navigation
-					   /page-loader
-					   /comments
+    /solitude
+        /assets
+            /css
+            /fonts
+            /images
+            /less
+            /js
+                /src
+                    /components
+                    /navigation
+                    /page-loader
+                    /comments
 
 ## JavaScript Naming
 
@@ -47,13 +47,13 @@ JavaScript files should use the **camelCase** syntax, use proper **dot notation*
 
 ### *Example*
 
-	/js
-	   /components
-		   /comments
-			   comments.service.js
-		   /keyboard
-			   keyCodes.service.js
-			   restrict.tabbing.service.js
+    /js
+        /components
+            /comments
+                comments.service.js
+            /keyboard
+                keyCodes.service.js
+                restrict.tabbing.service.js
 
 ## HTML
 
@@ -61,11 +61,11 @@ HTML files should be lowercased.  When needed, longer folder names should be sep
 
 ### *Example*
 
-	/solitude
-		/partials
-			author-header.hbs
-			comments.hbs
-			footer.hbs
+    /solitude
+        /partials
+            author-header.hbs
+            comments.hbs
+            footer.hbs
 
 ## LESS
 
