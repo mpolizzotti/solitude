@@ -1,6 +1,6 @@
 {
   "name": "solitude",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Solitude is a modern and responsive theme for the ghost blogging platform.",
   "main": "index.hbs",
   "engines": {
@@ -10,7 +10,7 @@
   "author": {
     "name": "Matthew Polizzotti",
     "email": "matthew.polizzotti@gmail.com",
-    "url": "www.matthewpolizzotti.com"
+    "url": "https://matthewpolizzotti.com"
   },
   "config": {
     "posts_per_page": 5
@@ -34,7 +34,7 @@
     "url": "https://github.com/mpolizzotti/solitude/issues"
   },
   "homepage": "https://github.com/mpolizzotti/solitude#readme",
-  "demo": "www.matthewpolizzotti.com",
+  "demo": "https://matthewpolizzotti.com",
   "scripts": {
     "build": "gulp build",
     "package": "gulp package",
